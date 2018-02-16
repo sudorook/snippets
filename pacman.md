@@ -1,4 +1,4 @@
-1. What package owns a command:
+1. What program implements a command:
 
 ```
 pacman -Qo <command>
