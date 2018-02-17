@@ -1,11 +1,13 @@
-1. Undo add-subtitles:
+# Bash
+
+## Undo add-subtitles
 
 ```
 for file in *.bak; do mv "$file" "${file%.*}"; done
 ```
 
 
-2. Upgrade julia packages:
+## Upgrade julia packages from the command line
 
 ```
 julia -e "Pkg.update(); using Gadfly"
