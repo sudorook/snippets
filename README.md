@@ -1,9 +1,10 @@
 # Snippets
 
-A collection of miscellaneous code snippets that are you often forget but are
-worth remembering.
+A collection of miscellaneous code snippets and application settings that you
+often forget but are worth remembering.
 
  * [Bash](bash.md)
+ * [GIMP](gimp.md)
  * [KVM/libvirt](kvm.md)
  * [LaTeX](latex.md)
  * [Pacman](pacman.md)
