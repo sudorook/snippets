@@ -5,3 +5,6 @@
 ```
 pacman -Qo <command>
 ```
+
+Note that this only applies to *available* commands from installed packages.
+Pacman won't search all the available packages.
