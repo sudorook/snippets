@@ -6,6 +6,7 @@ often forget but are worth remembering.
  * [Bash](bash.md)
  * [dd](dd.md)
  * [GIMP](gimp.md)
+ * [Git](git.md)
  * [KVM/libvirt](kvm.md)
  * [LaTeX](latex.md)
  * [Pacman](pacman.md)
