@@ -8,7 +8,7 @@
 3. Shut down the VM and pass the qcow2 file to the shrink-vm script.
 
 
-## Enable virgl 3d rendering
+## Enable virgl 3d rendering in Virtual Machine Manager
 
 1. Switch the Video mode from QXL to Virtio, and check the 3D acceleration
    option.
