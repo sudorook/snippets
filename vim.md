@@ -19,3 +19,11 @@ In visual mode, highlight the text and enter:
 ```
 %j
 ```
+
+## Enable truecolor support
+
+By default, vim will default to a 256-color palette. To enable more colors, add
+the following to your vimrc:
+```
+set termguicolors
+```
