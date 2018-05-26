@@ -5,6 +5,7 @@ often forget but are worth remembering.
 
  * [Bash](bash.md)
  * [dd](dd.md)
+ * [FFmpeg](ffmpeg.md)
  * [GIMP](gimp.md)
  * [Git](git.md)
  * [KVM/libvirt](kvm.md)
