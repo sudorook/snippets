@@ -27,3 +27,17 @@ the following to your vimrc:
 ```
 set termguicolors
 ```
+
+## Disable MiniBufferExplorer
+
+If you don't find MiniBufferExplorer useful and want to disable it, add to your
+vimrc:
+```
+let g:miniBufExplAutoStart=0
+```
+
+If all you want is to disable the addon from showing by default in diffs, you
+can instead add:
+```
+let g:miniBufExplHideWhenDiff=0
+```
