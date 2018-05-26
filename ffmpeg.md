@@ -15,6 +15,12 @@ ffprobe -v error -show_entries stream=index,codec_name,codec_type <input>
 
 ## Hardcode subtitles
 
+See the [FFmpeg subtitle
+docs](https://trac.ffmpeg.org/wiki/HowToBurnSubtitlesIntoVideo) for complete
+documentation.
+
+### Text-based subtitles (ass, srt, etc.)
+
 If you want to hardcode soft subtitles in a video, run:
 ```
 ffmpeg -i <input> -vf subtitles=<input> <output>
@@ -27,7 +33,14 @@ subtitle file, use `subtitles=<external subfile>` instead.
 Note that this will only work with text based (ass, srt) subtitles, not image
 based ones, which are usually found in DVD/Blu-ray rips.
 
-See the [FFmpeg subtitle docs](https://trac.ffmpeg.org/wiki/HowToBurnSubtitlesIntoVideo)
+### Picture-based subtitles (sup, etc.)
+
+For picture-based subtitles, instead run:
+```
+ffmpeg -i <input> -filter_complex "[0:v][0:s]overlay[v]" -map "[v]" -map 0:a <output>
+```
+
+This will burn the first subtitle stream into the first video stream.
 
 
 ## Extract streams into separate files
