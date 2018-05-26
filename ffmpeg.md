@@ -102,6 +102,8 @@ by adding `disposition:s:0 default` to the `ffmpeg` options. This will set the
 first subtitle stream as the default. To set the (n+1)th stream as default
 instead, use `dispostition:s:n default` instead.
 
+To unset a stream as default, use `disposition:s:n 0`.
+
 
 ## Concatenate videos
 
