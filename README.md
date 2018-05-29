@@ -11,4 +11,5 @@ often forget but are worth remembering.
  * [KVM/libvirt](kvm.md)
  * [LaTeX](latex.md)
  * [Pacman](pacman.md)
+ * [Samba](samba.md)
  * [Vim](vim.md)
