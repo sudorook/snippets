@@ -15,5 +15,5 @@ git push <remote> <localbranch>:<remotebranch>
 ## Pull from a differently named remote branch
 
 ```
-git push <remote> <remotebranch>:<localbranch>
+git pull <remote> <remotebranch>:<localbranch>
 ```
