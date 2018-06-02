@@ -6,8 +6,8 @@
 git rev-list --count --all
 ```
 
-## Push a branch to a differently named branch
+## Push a branch to a differently named remote branch
 
 ```
-git push <remote> <branch1>:<branch2>
+git push <remote> <localbranch>:<remotebranch>
 ```
