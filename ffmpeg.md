@@ -76,20 +76,20 @@ automatically.
 
 To cut a bit out of a video:
 ```
-ffmpeg -i <input> -ss mm:ss.x -t s <output>
+ffmpeg -i <input> -ss <mm:ss.x> -t <s> <output>
 ```
 
-The `-ss` option is for specifying the timestamp for when you want the clip to
-start, formatted minutes:seconds.decimal (e.g. 14:23.5). The `-t` flag is for
-setting the length of the clip in seconds, so setting, for example, `-t 10.4`
-would make the clip last 10.4 seconds.
+The `-ss <mm:ss.x>` option is for specifying the timestamp for when you want
+the clip to start, formatted minutes:seconds.decimal (e.g. '-ss 14:23.5'). The
+`-t` flag is for setting the length of the clip in seconds, so setting, for
+example, `-t 10.4` would make the clip last 10.4 seconds.
 
 If you want to set specific streams in the video, you can add the `-map`
 options described above. For example, to take the first video, audio, and
 subtitle streams, run:
 ```
 ffmpeg -i <input> -map 0:v -c:v copy -map 0:a:0 -c:a copy -map 0:s:0 -c copy \
-       -ss mm:ss.x -t s <output>
+       -ss <mm:ss.x> -t <s> <output>
 ```
 
 
@@ -101,7 +101,9 @@ ffmpeg -i <video> -i <audio> -i <subtitle> \
        -c:v copy -c:a copy -c:s copy <output>
 ```
 
-The above example will 
+The above example will splice a video, audio, and subtitle stream into one
+video. Useful for foreign releases where audio tracks are supplied in separate
+files.
 
 It's also possible to do more complicated stuff, like using the same stream
 more than once and reencoding each duplicate differently (see the [map
