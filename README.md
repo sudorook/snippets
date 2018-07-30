@@ -3,6 +3,7 @@
 A collection of miscellaneous code snippets and application settings that you
 often forget but are worth remembering.
 
+ * [Android](android.md)
  * [Bash](bash.md)
  * [dd](dd.md)
  * [FFmpeg](ffmpeg.md)
