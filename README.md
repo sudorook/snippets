@@ -13,6 +13,7 @@ often forget but are worth remembering.
  * [LaTeX](latex.md)
  * [Linux](linux.md)
  * [Pacman](pacman.md)
+ * [Printers](printers.md)
  * [Samba](samba.md)
  * [SSH](ssh.md)
  * [Vim](vim.md)
