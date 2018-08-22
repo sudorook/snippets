@@ -6,6 +6,12 @@
 git rev-list --count --all
 ```
 
+## Cleanup local repository
+
+```
+git gc --prune --aggressive
+```
+
 ## Push a branch to a differently named remote branch
 
 ```
