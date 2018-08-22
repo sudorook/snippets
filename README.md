@@ -14,4 +14,5 @@ often forget but are worth remembering.
  * [Linux](linux.md)
  * [Pacman](pacman.md)
  * [Samba](samba.md)
+ * [SSH](ssh.md)
  * [Vim](vim.md)
