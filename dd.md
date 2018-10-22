@@ -30,15 +30,16 @@ Requires pixz or pigz, depending of the type of compression used.
 sudo dd if=/dev/DEVICE bs=1M status=progress | pixz > IMAGE.img.xz
 ```
 
-DEVICE represents the device name, e.g. sda or mmcblk0.
+DEVICE represents the device name, e.g. sda or mmcblk0, and IMAGE is the
+desired name to call the compressed image.
 
 
-## Write compressed backup image to disk
+## Write (in parallel) compressed backup image to disk
 
 Requires pixz or pigz, depending of the type of compression used.
 ```
 sudo sh -c "pixz -d < IMAGE.img.xz > /dev/DEVICE" && sync
-sudo dd if=/dev/DEVICE bs=1M status=progress | pixz > IMAGE.img.xz
 ```
 
-DEVICE represents the device name, e.g. sda or mmcblk0.
+DEVICE represents the device name, e.g. sda or mmcblk0, and IMAGE is the
+desired name to call the compressed image.
