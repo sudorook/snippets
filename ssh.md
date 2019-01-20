@@ -13,7 +13,7 @@ Note: The -o flag specifies that the key be saved in the new OpenSSH key format
 ## Use SSH key to login to remote server
 
 ```
-ssh-copy-id -i <identity> <user@server>
+ssh-copy-id -i <identity> <user>@<server>
 ```
 
 ## Use SSH multiplexing to avoid multiple authentications
