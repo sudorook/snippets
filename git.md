@@ -23,3 +23,18 @@ git push <remote> <localbranch>:<remotebranch>
 ```
 git pull <remote> <remotebranch>:<localbranch>
 ```
+
+## Remove a file from the git history
+
+```
+git filter-branch -f --index-filter \
+  "git rm -rf --cached --ignore-unmatch <REGEX>" \
+  --prune-empty --tag-name-filter cat -- --all
+
+rm -rf .git/refs/original/
+git reflog expire --expire=now --all
+git gc --aggressive --prune=now
+```
+
+Then, force push to the remote repository (`git push -f origin master`). The
+regex can also be a simple path.
