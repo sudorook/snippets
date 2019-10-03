@@ -17,3 +17,4 @@ often forget but are worth remembering.
  * [Samba](samba.md)
  * [SSH](ssh.md)
  * [Vim](vim.md)
+ * [wee-slack](wee-slack.md)
