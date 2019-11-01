@@ -32,7 +32,8 @@ You can also use a wildcard for the hostname to enable this for all domains.
 
 ### Make the SSH master connection persist after closing
 
-Add the additional line to the ~/.ssh/config:
+Given the changes for simple SSH multiplexing, add an additional line to the
+~/.ssh/config so that it reads:
 
 ```
 Host <hostname>
