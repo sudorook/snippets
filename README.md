@@ -12,6 +12,7 @@ often forget but are worth remembering.
  * [KVM/libvirt](kvm.md)
  * [LaTeX](latex.md)
  * [Linux](linux.md)
+ * [Network](network.md)
  * [Pacman](pacman.md)
  * [Printers](printers.md)
  * [Samba](samba.md)
