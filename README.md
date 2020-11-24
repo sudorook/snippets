@@ -18,5 +18,6 @@ often forget but are worth remembering.
  * [Printers](printers.md)
  * [Samba](samba.md)
  * [SSH](ssh.md)
+ * [Text](text.md)
  * [Vim](vim.md)
  * [wee-slack](wee-slack.md)
