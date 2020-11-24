@@ -123,3 +123,10 @@ To unset a stream as default, use `disposition:s:n 0`.
 ## Concatenate videos
 
 See the [FFmpeg concatenation docs](https://trac.ffmpeg.org/wiki/Concatenate).
+
+
+## Extract subtitles
+
+```
+ffmpeg -i <video>.<extension> <video>.srt
+```
