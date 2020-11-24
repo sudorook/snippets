@@ -20,5 +20,6 @@ often forget but are worth remembering.
  * [Samba](samba.md)
  * [SSH](ssh.md)
  * [Text](text.md)
+ * [UEFI](uefi.md)
  * [Vim](vim.md)
  * [wee-slack](wee-slack.md)
