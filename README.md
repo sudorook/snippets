@@ -10,6 +10,7 @@ often forget but are worth remembering.
  * [FFmpeg](ffmpeg.md)
  * [GIMP](gimp.md)
  * [Git](git.md)
+ * [Initramfs](initramfs.md)
  * [KVM/libvirt](kvm.md)
  * [LaTeX](latex.md)
  * [Linux](linux.md)
