@@ -127,6 +127,17 @@ See the [FFmpeg concatenation docs](https://trac.ffmpeg.org/wiki/Concatenate).
 
 ## Extract subtitles
 
+To extract an SRT text stream:
 ```
 ffmpeg -i <video>.<extension> <video>.srt
+```
+
+For DVDSUB streams, extract into a Matroska container:
+```
+ffmpeg -i <video> -map 0:s:0 -c:s dvdsub -f matroska subtitles.mkv
+```
+
+The stream can be added to a video later via:
+```
+ffmpeg -i <video> -i subtitles.mkv -c copy -c:s dvd_subtitle <new video>
 ```
