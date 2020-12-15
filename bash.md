@@ -1,5 +1,12 @@
 # Bash
 
+## Replace $'\n' with ' ' in file names
+
+```
+find . -type f -exec rename $'\n' ' ' {} +
+```
+
+
 ## Undo add-subtitles
 
 ```
