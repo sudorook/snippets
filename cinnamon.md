@@ -2,7 +2,8 @@
 
 ## Reduce margin between applications in grouped window list
 
-Change the `setMargin()` method in the AppGroup class to read:
+Change the `this.actor.style` attribute in the `setMargin()` method of the
+`AppGroup` class. To reduce the icon margins to 2px, the code will read as:
 ```
 setMargin() {
   let direction = this.state.isHorizontal ? 'right' : 'bottom';
