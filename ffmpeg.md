@@ -110,6 +110,13 @@ more than once and reencoding each duplicate differently (see the [map
 documentation](https://trac.ffmpeg.org/wiki/Map)).
 
 
+## Dump all attachments in a video container
+
+To dump all the attached files in the current working directory, run:
+```
+ffmpeg -dump_attachment:t "" -i <input>
+```
+
 ## Show subtitles by default in a video
 
 When setting subtitle streams, you can specify that they be showed by default
