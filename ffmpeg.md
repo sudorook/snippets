@@ -153,5 +153,8 @@ ffmpeg -i <video> -i subtitles.mkv -c copy -c:s dvd_subtitle <new video>
 ## Convert FLAC to MP3
 
 ```
-for file in *.flac; do ffmpeg -i "${file}" -b:a 320k "${file%.*}.mp3"; done
+ffmpeg -i "<FLAC input>" -b:a 320k "<MP3 output>"
 ```
+
+The above uses a 320k bitrate, which can be reduced for a greater compression
+ratio.
