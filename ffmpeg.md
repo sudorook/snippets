@@ -117,14 +117,24 @@ To dump all the attached files in the current working directory, run:
 ffmpeg -dump_attachment:t "" -i <input>
 ```
 
-## Show subtitles by default in a video
 
-When setting subtitle streams, you can specify that they be showed by default
-by adding `disposition:s:0 default` to the `ffmpeg` options. This will set the
-first subtitle stream as the default. To set the (n+1)th stream as default
-instead, use `dispostition:s:n default` instead.
+## Change default streams
 
-To unset a stream as default, use `disposition:s:n 0`.
+To change the default video/audio/subtitle stream in containers with multiple,
+use the `disposition` flag. Set the new default stream by `-disposition:x:n
+default` --- where `x` is the type of stream and `n` the index number in the
+container --- and unset the remaining ones with `-disposition:y:m none`.
+Remember that streams are indexed from 0.
+
+For example, to switch the default audio stream from the first to the second in
+a Matroska container with two audio streams (while keeping everything else
+intact), run:
+```
+ffmpeg -i <input> -map 0 -disposition:a:1 default -disposition:a:0 none -c copy <output>
+```
+
+For another example, to disable showing a subtitle stream by default, use the
+`-disposition:s:n 0` flag.
 
 
 ## Concatenate videos
