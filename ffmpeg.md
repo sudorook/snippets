@@ -110,6 +110,22 @@ more than once and reencoding each duplicate differently (see the [map
 documentation](https://trac.ffmpeg.org/wiki/Map)).
 
 
+## Copy chapters/metadata from one file to another
+
+The following copies all the data streams from `input1` and merges them with
+the metadata from `input0`:
+```
+ffmpeg -i <input0> -i <input1> -map 1 -map_metadata 0 -c copy <output>
+```
+
+Note that this only copies metadata, not fonts or other attachments.
+
+To copy chapter data, instead run:
+```
+ffmpeg -i <input0> -i <input1> -map 1 -map_chapters 0 -c copy <output>
+```
+
+
 ## Dump all attachments in a video container
 
 To dump all the attached files in the current working directory, run:
