@@ -194,3 +194,11 @@ ffmpeg -i "<FLAC input>" -b:a 320k "<MP3 output>"
 
 The above uses a 320k bitrate for conversion. To reduce file size further,
 reduce this value.
+
+
+## Merge streams
+
+To merge streams from two files, (e.g. add an audio stream to a video), run:
+```
+ffmpeg -i <input 1> -i <input 2> -map 0 -map 1 -c copy <output>
+```
