@@ -200,5 +200,12 @@ reduce this value.
 
 To merge streams from two files, (e.g. add an audio stream to a video), run:
 ```
-ffmpeg -i <input 1> -i <input 2> -map 0 -map 1 -c copy <output>
+ffmpeg -i <input 0> -i <input 1> -map 0 -map 1 -c copy <output>
+```
+
+If some streams are to be omitted when merging, adjust the above command as
+needed. For example, to combine the video stream in one file with the audio of
+another, run:
+```
+ffmpeg -i <input 0> -i <input 1> -map 0:v -map 1:a -c copy <output>
 ```
