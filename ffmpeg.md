@@ -12,6 +12,8 @@ To view the streams present in a file, use:
 ffprobe -v error -show_entries stream=index,codec_name,codec_type <input>
 ```
 
+(Or, simply run `ffprobe` without the extra arguments above.)
+
 
 ## Hardcode subtitles
 
