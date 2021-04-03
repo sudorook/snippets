@@ -6,6 +6,11 @@
 s/^\d\+/\=(submatch(0)+1)/
 ```
 
+To increment anywhere within lines:
+```
+s/^filler text \zs\(\d\+\)/\=(submatch(0)+1)/
+```
+
 ## Wrap lines around 80-characters
 
 In visual mode, highlight the text and enter:
