@@ -161,8 +161,8 @@ intact), run:
 ffmpeg -i <input> -map 0 -disposition:a:1 default -disposition:a:0 none -c copy <output>
 ```
 
-For another example, to disable showing a subtitle stream by default, use the
-`-disposition:s:n 0` flag.
+For another example, to disable showing any subtitle stream by default, use the
+`-disposition:s -default` flag.
 
 
 ## Concatenate videos
