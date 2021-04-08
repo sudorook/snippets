@@ -17,6 +17,7 @@ often forget but are worth remembering.
  * [Linux](linux.md)
  * [Network](network.md)
  * [Pacman](pacman.md)
+ * [PDF](pdf.md)
  * [Printers](printers.md)
  * [Samba](samba.md)
  * [SSH](ssh.md)
