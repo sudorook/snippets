@@ -130,11 +130,10 @@ ffmpeg -i <input0> -i <input1> -map 1 -map_chapters 0 -c copy <output>
 
 ## Copy embedded fonts from one file to another
 
-The following copies the metadata from `input1` to the `input0`:
+The following copies the metadata from `input1` to `input0`:
 ```
-ffmpeg -i <input0> -i <input1> \
- -map_chapters 1 -map 0:v -map 0:a -c copy \
- -map 0:s -map 1:s -map 0:t -map 1:t <output>
+ffmpeg -i <input0> -i <input1> -map_chapters 1 \
+  -map 0:v -map 0:a -c copy -map 0:s -map 1:s -map 0:t -map 1:t <output>
 ```
 
 
