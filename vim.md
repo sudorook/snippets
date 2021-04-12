@@ -46,3 +46,11 @@ can instead add:
 ```
 let g:miniBufExplHideWhenDiff=0
 ```
+
+## Convert spaces to newlines
+
+To break a list of space- or otherwise-delimited items into a list with one
+item on each line, run:
+```
+%s/ /\r/g
+```
