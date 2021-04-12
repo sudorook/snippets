@@ -137,6 +137,26 @@ ffmpeg -i <input0> -i <input1> -map_chapters 1 \
 ```
 
 
+## Append fonts to a Matroska container
+
+To attach an opentype font file to a container, run:
+```
+ffmpeg -i <input.mkv> -map 0 -c copy \
+  -attach <font.otf> -metadata:s:t mimetype=application/vnd.ms-opentype \
+  <output.mkv>
+```
+
+For attaching a truetype font, instead run:
+```
+ffmpeg -i <input.mkv> -map 0 -c copy \
+  -attach <font.ttf> -metadata:s:t mimetype=application/x-truetype-font \
+  <output.mkv>
+```
+
+Multiple fonts can be attached to a single stream by adding multiple `-attach`
+lines. The font streams will be added and numbered at the end of the list.
+
+
 ## Dump all attachments in a video container
 
 To dump all the attached files in the current working directory, run:
