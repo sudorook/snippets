@@ -186,7 +186,22 @@ For another example, to disable showing any subtitle stream by default, use the
 
 ## Concatenate videos
 
-See the [FFmpeg concatenation docs](https://trac.ffmpeg.org/wiki/Concatenate).
+See the [FFmpeg concatenation docs](https://trac.ffmpeg.org/wiki/Concatenate)
+for full documentation.
+
+To simply concatenate two files, create a text file (e.g. files.lst) containing
+a list of files to be combined. Format is as follows:
+```
+file 'file 1'
+file 'file 2'
+```
+
+Pass the text file to FFmpeg with the `concat` flag:
+```
+ffmpeg -safe 0 -f concat -i files.lst -c copy -scodec copy output.mkv
+```
+
+The `-safe 0` flag may be necessary.
 
 
 ## Extract subtitles
