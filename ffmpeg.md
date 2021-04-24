@@ -228,8 +228,8 @@ ffmpeg -i <video> -i subtitles.mkv -c copy -c:s dvd_subtitle <new video>
 ffmpeg -i "<FLAC input>" -b:a 320k "<MP3 output>"
 ```
 
-The above uses a 320k bitrate for conversion. To reduce file size further,
-reduce this value.
+The above uses the maximum MP3 bitrate of 320k for conversion. To reduce file
+size, reduce this value.
 
 
 ## Merge streams
