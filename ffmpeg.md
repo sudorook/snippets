@@ -232,6 +232,21 @@ The above uses the maximum MP3 bitrate of 320k for conversion. To reduce file
 size, reduce this value.
 
 
+## Strip all metadata
+
+To remove attachments, subtitles, fonts, etc. from a container, run:
+```
+ffmpeg -i <input> -map_metadata -1 -c:v copy -c:a copy <output>
+```
+
+To strip chapter metadata instead, run:
+```
+ffmpeg -i <input> -map_chapters -1 -c:v copy -c:a copy <output>
+```
+
+Combine `-map_metadata -1` and `-map_chapters -1` to remove both.
+
+
 ## Merge streams
 
 To merge streams from two files, (e.g. add an audio stream to a video), run:
