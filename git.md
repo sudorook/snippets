@@ -1,5 +1,20 @@
 # Git
 
+## Create and apply patches
+
+To create a patch against a branch, run:
+```
+git format-patch <branch>
+```
+
+This will generate patch files at the base of the repository. Alternately, use
+`HEAD~#` or `<sha256>` instead of the branch name.
+
+To apply the patch and add the commit to the Git history, run:
+```
+git am < <path/to/file.patch>
+```
+
 ## Get number of commits in repository
 
 ```
