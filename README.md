@@ -5,6 +5,7 @@ often forget but are worth remembering.
 
  * [Android](android.md)
  * [Bash](bash.md)
+ * [Beets](beets.md)
  * [Cinnamon](cinnamon.md)
  * [dd](dd.md)
  * [FFmpeg](ffmpeg.md)
