@@ -27,6 +27,13 @@ git rev-list --count --all
 git gc --prune --aggressive
 ```
 
+To find and prune all Git directories (starting from the current working
+directory), run:
+```
+find . -type d -name ".git" \
+  -exec bash -c 'DIR="$(dirname "${1}")"; git -C "${DIR}" gc --prune=now --aggressive' bash {} \;
+```
+
 ## Push a branch to a differently named remote branch
 
 ```
