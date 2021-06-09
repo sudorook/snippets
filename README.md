@@ -26,3 +26,4 @@ often forget but are worth remembering.
  * [UEFI](uefi.md)
  * [Vim](vim.md)
  * [wee-slack](wee-slack.md)
+ * [zsh](zsh.md)
