@@ -1,5 +1,18 @@
 # Beets
 
+## Change MusicBrainz IDs of imported albums
+
+First, change the ID metadata.
+```
+beet modify "<album name>" mb_albumid=<musicbrainz id>
+```
+
+Then, reimport using the `-c` flag to copy files in place and `-a` to use the
+auto-tagger plugin.
+```
+beet import -ca "<path to album directory>"
+```
+
 ## Import pre-tagged directories
 
 ```
