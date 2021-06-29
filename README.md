@@ -13,6 +13,7 @@ often forget but are worth remembering.
  * [Git](git.md)
  * [Google](google.md)
  * [Initramfs](initramfs.md)
+ * [ImageMagick](imagemagick.md)
  * [KVM/libvirt](kvm.md)
  * [LaTeX](latex.md)
  * [Linux](linux.md)
