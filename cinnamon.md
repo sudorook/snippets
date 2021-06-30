@@ -14,3 +14,10 @@ setMargin() {
 
 The file is located at
 `cinnamon/applets/grouped-window-list@cinnamon.org/appGroup.js`.
+
+To all the above in a single command, run:
+```
+sudo sed -i \
+  "s/this.actor.style = existingStyle + 'margin-' + direction + ':6px;'/this.actor.style = existingStyle + 'margin-' + direction + ':2px;'/g" \
+  /usr/share/cinnamon/applets/grouped-window-list@cinnamon.org/appGroup.js
+```
