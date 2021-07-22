@@ -58,5 +58,6 @@ git reflog expire --expire=now --all
 git gc --aggressive --prune=now
 ```
 
-Then, force push to the remote repository (`git push -f origin master`). The
-regex can also be a simple path.
+Replace `<REGEX>` with a pattern to match the file(s) to remove. The pattern
+may be a simple, hard-coded path. Then, force push to the remote repository
+(`git push -f origin master`).
