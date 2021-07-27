@@ -180,6 +180,10 @@ intact), run:
 ffmpeg -i <input> -map 0 -disposition:a:1 default -disposition:a:0 none -c copy <output>
 ```
 
+Be sure to specify the disposition before the codec. Also, for Matroska output
+containers, also specify `-default_mode infer_no_subs` with the disposition
+parameter.
+
 For another example, to disable showing any subtitle stream by default, use the
 `-disposition:s -default` flag.
 
