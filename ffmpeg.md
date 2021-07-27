@@ -230,6 +230,18 @@ ffmpeg -i <video> -i subtitles.mkv -c copy -c:s dvd_subtitle <new video>
 ```
 
 
+## Increase probe size for codec detection
+
+When warnings appear and suggest increasing the 'analyzeduration' and
+'probesize' options (for example when reading PGS subtitle format), alter the
+`ffmpeg` command:
+```
+ffmpeg -analyzeduration 50M -probesize 50M ...
+```
+
+Increase the size until the warning disappears.
+
+
 ## Convert FLAC to MP3
 
 ```
