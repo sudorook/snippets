@@ -196,16 +196,20 @@ for full documentation.
 To simply concatenate two files, create a text file (e.g. files.lst) containing
 a list of files to be combined. Format is as follows:
 ```
-file 'file 1'
-file 'file 2'
+file 'path/to/file1'
+file 'path/to/file2'
 ```
 
-Pass the text file to FFmpeg with the `concat` flag:
+The files paths need to be encapsulated in single quotes, so avoid file names
+with single quotes in them.
+
+Then, pass the text file to FFmpeg with the `concat` flag:
 ```
 ffmpeg -safe 0 -f concat -i files.lst -c copy -scodec copy output.mkv
 ```
 
-The `-safe 0` flag may be necessary.
+The `-safe 0` flag may be necessary to bypass warnings about unsafe file names,
+such as those with spaces.
 
 
 ## Extract subtitles
