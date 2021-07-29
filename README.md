@@ -7,6 +7,7 @@ often forget but are worth remembering.
  * [Bash](bash.md)
  * [Beets](beets.md)
  * [Cinnamon](cinnamon.md)
+ * [date](date.md)
  * [dd](dd.md)
  * [FFmpeg](ffmpeg.md)
  * [GIMP](gimp.md)
