@@ -18,3 +18,12 @@ find . -type f -not -path "*/.git/*" -exec sed -i "s/ \+$//g" {} +
 
 The `-not -path "*/.git/*"` is to prevent sed from mangling the git history if
 present.
+
+
+## Watch files
+
+To watch the contents of a text file, for example a log file, for newly
+appended data, run:
+```
+tail -f <log file>
+```
