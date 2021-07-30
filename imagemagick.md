@@ -16,3 +16,12 @@ magick <input> -strip -interlace Plane -sampling-factor 4:2:0 -quality 95% <outp
 ```
 
 
+## Rotate images
+
+To rotate an image:
+```
+magick <input> -rotate <angle> <output>
+```
+
+Some images have built-in rotation metadata and will be oriented properly in
+most image viewers.
