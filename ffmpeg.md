@@ -45,6 +45,29 @@ ffmpeg -i <input> -filter_complex "[0:v][0:s]overlay[v]" -map "[v]" -map 0:a <ou
 This will burn the first subtitle stream into the first video stream.
 
 
+## Crop Video
+
+Run:
+```
+ffmpeg -i <input> -filter:v 'crop=<width>:<height>:<x>:<y>' -codec:a copy <output>
+```
+
+Parameters `width` and `height` are width and height of the cropped video, and
+`x` and `y` are the coordinates relative to the original video for where the
+top-left corner is located.
+
+To estimate the appropriate values for the crop filter, one can use the
+`cropdetect` feature. Run:
+```
+ffmpeg -i <input> -filter:v cropdetect -codec:a copy -f null -
+```
+
+The output stream will show a moving estimate for the best crop setting.
+
+To avoid scanning the entire video stream, add the `-t <duration>` flag to the
+above command to specify the duration to scan.
+
+
 ## Extract streams into separate files
 
 To split all the streams in a video container into separate files, run:
