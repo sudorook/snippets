@@ -54,3 +54,13 @@ item on each line, run:
 ```
 %s/ /\r/g
 ```
+
+## Select a paragraph/function in visual mode
+
+To select a whole paragraph or function, move the cursor to within the block of
+interest and type:
+```
+vip
+```
+
+The section is demarcated by empty lines above and below.
