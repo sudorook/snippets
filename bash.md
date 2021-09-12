@@ -11,3 +11,9 @@ find . -type f -exec rename $'\n' ' ' {} +
 ```
 find <start path> -not -path "<exclude path>"
 ```
+
+## Find broken symlinks
+
+```
+find <path> -type l -exec test ! -e {} \; -print
+```
