@@ -30,3 +30,16 @@ If instead, one wants to rename the field, use:
 ```
 mkvpropedit -e track:<ID> -s name="<NAME>" <VIDEO>
 ```
+
+
+## Modify chapter metadata
+
+First, extract the metadata into an XML file:
+```
+mkvextract <INPUT> chapters > <XML>
+```
+
+Edit this file as needed, and when ready to re-import into the original file, run:
+```
+mkvpropedit <INPUT> --chapters <XML>
+```
