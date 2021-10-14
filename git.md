@@ -61,3 +61,16 @@ git gc --aggressive --prune=now
 Replace `<REGEX>` with a pattern to match the file(s) to remove. The pattern
 may be a simple, hard-coded path. Then, force push to the remote repository
 (`git push -f origin master`).
+
+
+## Repack a repository
+
+Some repositories have `.pack` file so large that they cannot fit in RAM when
+running `git gc`. It is possible to re-pack them so that they fit within file
+size constraints. For example, run:
+
+```
+git repack -a -d --window-memory 100M --max-pack-size 1G
+```
+
+Adjust the above size thresholds as needed.
