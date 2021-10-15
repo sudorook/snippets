@@ -10,6 +10,7 @@ often forget but are worth remembering.
  * [date](date.md)
  * [dd](dd.md)
  * [FFmpeg](ffmpeg.md)
+ * [Fonts](fonts.md)
  * [GIMP](gimp.md)
  * [Git](git.md)
  * [Google](google.md)
