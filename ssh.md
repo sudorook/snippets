@@ -50,3 +50,10 @@ To manually kill the background connection, run:
 ```
 ssh -O exit <user>@<server>
 ```
+
+## Copy a file with a colon in the file name
+
+Prefix the file or directory with `./`. (There is no need to escape the `:`.)
+```
+scp ./<file> <user>@<address>:<path>
+```
