@@ -5,6 +5,31 @@ wiki](https://trac.ffmpeg.org/wiki) first. It's much more useful than
 StackOverflow.
 
 
+## Change output verbosity
+
+Copied from [this thread](https://ffmpeg.org/pipermail/ffmpeg-user/2013-December/018834.html).
+
+| key | function                                             |
+| --- | ---                                                  |
+| ?   | show this help                                       |
+| +   | increase verbosity                                   |
+| -   | decrease verbosity                                   |
+| c   | send command to first matching filter supporting it  |
+| C   | send/Que command to all matching filters             |
+| D   | cycle through available debug modes                  |
+| h   | dump packets/hex press to cycle through the 3 states |
+| q   | quit                                                 |
+| s   | show QP histogram                                    |
+
+The left arrow key sends the escape sequence `^[[D` to ffmpeg, and ffmpeg
+ignores all keys until it matches something usable:
+
+Up:    `^[[A`
+Down:  `^[[B`
+Right: `^[[C` (matches Send/Que command to all matching filters)
+Left:  `^[[D` (matches cycle through available debug modes)
+
+
 ## Display the streams in a container
 
 To view the streams present in a file, use:
