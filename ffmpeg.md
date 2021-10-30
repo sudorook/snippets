@@ -315,6 +315,21 @@ ffmpeg -i <input> -map_chapters -1 -c:v copy -c:a copy <output>
 Combine `-map_metadata -1` and `-map_chapters -1` to remove both.
 
 
+## Extract metadata to file
+
+To dump existing metadata to a file, run:
+```
+ffmpeg -i <input> -f ffmetadata <output>
+```
+
+To load metadata, (e.g. after edits), run:
+```
+ffmpeg -i <input> -i <ffmetadatafile> -map_metadata 1 ...
+```
+
+The `<ffmetadatafile>` is the data produced by the first command.
+
+
 ## Merge streams
 
 To merge streams from two files, (e.g. add an audio stream to a video), run:
