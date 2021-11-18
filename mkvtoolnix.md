@@ -43,3 +43,13 @@ Edit this file as needed, and when ready to re-import into the original file, ru
 ```
 mkvpropedit <INPUT> --chapters <XML>
 ```
+
+
+## Change default tracks
+
+To change the default audio, subtitle, etc. track for a MKV container, use the
+`--edit` flag to change the `flag-default` setting. For example, to switch from
+the first audio track to the second, run:
+```
+mkvpropedit <INPUT> --edit track:a1 --set flag-default=0 --edit track:a2 --set flag-default=1
+```
