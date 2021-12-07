@@ -73,3 +73,23 @@ git repack -a -d --window-memory 100M --max-pack-size 1G
 ```
 
 Adjust the above size thresholds as needed.
+
+## Create a compressed release archive
+
+To release an archived version of the source code (without the Git metadata and
+version history), run:
+```
+git archive --prefix=<prefix> -o <output> <ID>
+```
+
+The `prefix` (optional) is a string appended to every file in the archive. If
+not given, extracting the resulting archive will empty the contents on the base
+of the repository in the currently working directory. Using `--prefix` allows
+files to extracted to a directory instead. Be sure to include a '/' in the
+prefix string.
+
+`<output>` is the name of the archive. Specify the type of compression used
+with the `--format` parameter. (Run `git archive --list` to see a list of the
+available formats.)
+
+`<ID>` refers to the branch, tag, commit hash to archive.
