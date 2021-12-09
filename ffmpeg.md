@@ -143,6 +143,23 @@ ffmpeg -i <input> -map 0:v -c:v copy -map 0:a:0 -c:a copy -map 0:s:0 -c copy \
 ```
 
 
+# Down-mix audio streams
+
+To combine many streams into a simpler layout, use `pan` to re-map audio
+streams. For example, the following will map the front left and front right
+streams to the left and right stereo:
+```
+ffmpeg -i <input> -af "pan=stereo|c0=FL|c1=FR" <output>
+```
+
+In the case where streams are to be down-mixed to stereo, simply use the `-ac` flag:
+```
+ffmpeg -i <input> -ac 2 <output>
+```
+
+Note that the above shorthand will drop the low frequency (LFE) stream.
+
+
 ## Join streams into a single file
 
 To join separate streams into a single container, run:
