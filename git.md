@@ -93,3 +93,24 @@ with the `--format` parameter. (Run `git archive --list` to see a list of the
 available formats.)
 
 `<ID>` refers to the branch, tag, commit hash to archive.
+
+
+## Updating all submodules
+
+Update each Git submodule to their respecting remote HEAD by running:
+```
+git pull --recurse-submodules
+```
+
+(Add `--jobs=...` if you want downloads to run in parallel.)
+
+Note that if the submodules have not already been initialized, run instead:
+```
+git submodule update --init --recursive
+```
+
+One can also use the `foreach` option to execute commands or a shell script in
+each submodule. The following example simply pulls from the master branch:
+```
+git submodule foreach git pull origin master
+```
