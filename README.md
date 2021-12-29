@@ -26,6 +26,7 @@ often forget but are worth remembering.
  * [Printers](printers.md)
  * [Samba](samba.md)
  * [SSH](ssh.md)
+ * [Tar](tar.md)
  * [Text](text.md)
  * [UEFI](uefi.md)
  * [Vim](vim.md)
