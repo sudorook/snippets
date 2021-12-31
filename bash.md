@@ -17,3 +17,9 @@ find <start path> -not -path "<exclude path>"
 ```
 find <path> -type l -exec test ! -e {} \; -print
 ```
+
+## Check if a file is empty
+
+```
+if [ -s <file> ]; then...
+```
