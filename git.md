@@ -39,6 +39,18 @@ find . -type d -name ".git" -exec sh -c 'DIR="$(dirname "${1}")" && git -C "${DI
 git push <remote> <localbranch>:<remotebranch>
 ```
 
+## Push a subset of commits to the repository
+
+To only some commits and not the full tree, use:
+```
+git push <remote> <localbranch>~<# number commits behind HEAD>:<remotabranch>
+```
+
+For example, to push all but the last 5 commits on master to remote master, run:
+```
+git push origin master~5:master
+```
+
 ## Pull from a differently named remote branch
 
 ```
