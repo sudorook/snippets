@@ -1,5 +1,11 @@
 # tar
 
+## Compress remote file / directory over SSH and store locally
+
+```
+ssh <user>@<host> "tar cf - <dir>" | zstd > <archive>
+```
+
 ## Manually set the decompression program
 
 When extracting a compressed tar archive, `tar` will automatically pick the
