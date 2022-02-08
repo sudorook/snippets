@@ -16,6 +16,7 @@ often forget but are worth remembering.
  * [Google](google.md)
  * [Initramfs](initramfs.md)
  * [ImageMagick](imagemagick.md)
+ * [kitty](kitty.md)
  * [KVM/libvirt](kvm.md)
  * [LaTeX](latex.md)
  * [Linux](linux.md)
