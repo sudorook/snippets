@@ -16,7 +16,7 @@
 2. Switch the SPICE display server listen type to 'None', and check the OpenGL
    box.
 3. Enable `cgroup_device_acl` in /etc/livbirt/qemu.conf and add
-   '/dev/dri/renderD128' to the list. Restart the libvirtd.service afterwards.
+   '/dev/dri/renderD128' to the list. Restart `libvirtd.service` afterwards.
 
 
 ## Delete image snapshots
