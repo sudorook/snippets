@@ -44,3 +44,13 @@ This is relevant for [OSX-KVM](https://github.com/kholia/OSX-KVM).
 ```
 virsh -c qemu:///system undefine --nvram <DOMAIN_ID>
 ```
+
+
+# Convert OVA file to QCOW2
+
+To convert a VirtualBox image in OVA format to a QCOW2 image compatible with
+QEMU, run:
+```
+tar xf <input>
+qemu-img convert -O qcow2 <input> <output>
+```
