@@ -23,6 +23,7 @@ often forget but are worth remembering.
  * [mkvtoolnix](mkvtoolnix.md)
  * [Network](network.md)
  * [Pacman](pacman.md)
+ * [Python](python.md)
  * [PDF](pdf.md)
  * [Printers](printers.md)
  * [Samba](samba.md)
