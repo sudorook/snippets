@@ -27,6 +27,7 @@ often forget but are worth remembering.
  * [PDF](pdf.md)
  * [Printers](printers.md)
  * [Samba](samba.md)
+ * [sed](sed.md)
  * [SSH](ssh.md)
  * [Tar](tar.md)
  * [Text](text.md)
