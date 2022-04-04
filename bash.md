@@ -2,6 +2,12 @@
 
 ## Check if a file is empty
 
+```sh
+[ -s <file> ]
 ```
-if [ -s <file> ]; then...
+
+## Check if an inode is readable
+
+```sh
+[ -r <file> ]
 ```
