@@ -24,3 +24,19 @@ the output of each command. This can also be accomplished by setting (`set
 -vx`) after the shebang in the script itself.
 
 Add the `-n` flag check syntax without executing the script.
+
+## Prevent interrupt
+
+To prevent the user from interrupting a process, add:
+```
+trap '' 2
+```
+
+The signal `2` corresponds to user interrupt (`CTRL+C`). To undo this and
+re-enable interrupts, use:
+```
+trap 2
+```
+
+These two invocations can be used to prevent a sensitive section of code from
+being interrupted.
