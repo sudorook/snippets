@@ -9,6 +9,7 @@ often forget but are worth remembering.
  * [Cinnamon](cinnamon.md)
  * [date](date.md)
  * [dd](dd.md)
+ * [exiftool](exiftool.md])
  * [FFmpeg](ffmpeg.md)
  * [find](find.md)
  * [Fonts](fonts.md)
