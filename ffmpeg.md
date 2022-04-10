@@ -70,6 +70,18 @@ ffmpeg -i <input> -filter_complex "[0:v][0:s]overlay[v]" -map "[v]" -map 0:a <ou
 This will burn the first subtitle stream into the first video stream.
 
 
+# Offset subtitle times
+
+To shift all the timings for subtitles, run:
+```
+ffmpeg -itsoffset <mm:ss.x> -i <input> -map 0:s:<stream> -c:s copy <output>
+```
+
+It is important to specify the `itsoffset` flag _before_ the input. The output
+format will be inferred by the file extension. It can also be specified by
+`-f`.
+
+
 ## Crop Video
 
 Run:
