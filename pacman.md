@@ -9,6 +9,9 @@ pacman -Qo <command>
 Note that this only applies to *available* commands from installed packages.
 Pacman won't search all the available packages.
 
+`pacman -Qo` can also be used on file paths to reveal which package installed
+it.
+
 ## Overwrite package files
 
 If a package is installed incorrectly or the installation is broken, overwrite
