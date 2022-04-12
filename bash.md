@@ -1,5 +1,22 @@
 # Bash
 
+## Extract substrings from variables
+
+Use `#` and `##` to match from the start of a string and return the shortest
+and longest possible match, respectively. Alternatively, use `%` and `%%` for
+matching from the end of strings. After expansion, what is returned is the
+remaining portions of the string that were unmatched.
+
+To illustrate, the following (result in comment):
+```bash
+var="one.two.three.four"
+${var}     # one.two.three.four
+${var#*.}  # two.three.four
+${var##*.} # four
+${var%.*}  # one.two.three
+${var%%.*} # one
+```
+
 ## Check if a file is empty
 
 ```bash
