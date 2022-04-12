@@ -17,6 +17,28 @@ ${var%.*}  # one.two.three
 ${var%%.*} # one
 ```
 
+## Capitalize
+
+```bash
+${var,,pattern} # lowercase all
+${var,pattern}  # lowercase first letter
+${var^^pattern} # uppercase all
+${var^pattern}  # uppercase first letter
+```
+
+If `pattern` is unspecified, all possible characters to convert will be
+converted.
+
+When applied to an array (subscripted by `[@]` or `[*]`, the pattern is applied
+to each item. Items are then returned as a list.
+
+An alternate method is to use the `@` and an operator:
+```bash
+${var@U} # all uppercase
+${var@u} # 1st character uppercase
+${var@L} # all lowercase
+```
+
 ## Check if a file is empty
 
 ```bash
