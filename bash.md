@@ -2,20 +2,20 @@
 
 ## Check if a file is empty
 
-```sh
+```bash
 [ -s <file> ]
 ```
 
 ## Check if an inode is readable
 
-```sh
+```bash
 [ -r <file> ]
 ```
 
 ## Logging output of a bash script
 
 Rather than embed `echo` in several places of a script, run:
-```
+```bash
 sh -vx <script>
 ```
 
@@ -28,13 +28,13 @@ Add the `-n` flag check syntax without executing the script.
 ## Prevent interrupt
 
 To prevent the user from interrupting a process, add:
-```
+```bash
 trap '' 2
 ```
 
 The signal `2` corresponds to user interrupt (`CTRL+C`). To undo this and
 re-enable interrupts, use:
-```
+```bash
 trap 2
 ```
 
