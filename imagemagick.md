@@ -1,5 +1,16 @@
 # ImageMagick
 
+## Strip image metadata but preserve embedded color profiles
+
+The `-strip` flag will delete everything, including the color profiles. To
+remove metadata but preserve them, use `-thumbnail` instead. Be sure to specify
+the output dimensions, which in the case of mimicking `strip`, will be the
+input dimensions.
+```
+magick <input> -thumbnail <heightxwidth> <output>
+```
+
+
 ## Compress JPG/PNG images
 
 Using `magick` instead of `convert`, run:
