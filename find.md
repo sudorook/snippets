@@ -3,7 +3,7 @@
 ## Replace $'\n' with ' ' in file names
 
 ```
-find . -type f -exec rename $'\n' ' ' {} +
+find . -type f -exec rename -a $'\n' ' ' {} \;
 ```
 
 ## Exclude path in `find` results
