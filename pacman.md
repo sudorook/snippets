@@ -1,5 +1,18 @@
 # Pacman (Arch Linux)
 
+## List the files installed by a package
+
+```
+pacman -Ql <package>
+```
+
+Alternatively, for a package archive that is not yet installed (e.g. `pacman
+-Sw ...`), run:
+
+```
+pacman -Qlp <file>
+```
+
 ## Find out what program implements a command
 
 ```
