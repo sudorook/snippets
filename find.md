@@ -12,6 +12,11 @@ find . -type f -exec rename -a $'\n' ' ' {} \;
 find <start path> -not -path "<exclude path>"
 ```
 
+## Prune all Git directories
+```sh
+find . -type d -name ".git" -exec sh -c 'DIR="$(dirname "${1}")" && echo "${DIR}" && git -C "${DIR}" gc --prune=now --aggressive && echo' sh {} \;
+```
+
 ## Delete `node_modules` directories
 ```sh
 find . -type d -name "node_modules" -prune -exec rm -rvf {} \;
