@@ -29,6 +29,7 @@ often forget but are worth remembering.
  * [Python](python.md)
  * [PDF](pdf.md)
  * [Printers](printers.md)
+ * [R](R.md)
  * [Samba](samba.md)
  * [sed](sed.md)
  * [SSH](ssh.md)
