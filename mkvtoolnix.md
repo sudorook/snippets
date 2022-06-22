@@ -18,9 +18,7 @@ The above assumes that the track IDs of the first two audio steams (from the
 and for subtitles, use `-s`. See `mkvmerge -h` for more information.
 
 
-## Editing title and other tag metadata from MKV containers
-
-### Remove/modify container title tags
+## Remove/modify container title tags
 
 To rename the title tag, run:
 ```
@@ -33,7 +31,7 @@ mkvpropedit -e info -d title <VIDEO>
 ```
 
 
-### Remove/modify stream title tags
+## Remove/modify stream title tags
 
 Each stream may have title tags associated with it. To delete, run:
 ```
