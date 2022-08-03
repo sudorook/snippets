@@ -24,7 +24,7 @@ git rev-list --count --all
 ## Cleanup local repository
 
 ```
-git gc --prune --aggressive
+git gc --prune=now --aggressive
 ```
 
 To find and prune all Git directories (starting from the current working
