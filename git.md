@@ -137,3 +137,23 @@ GIT_AUTHOR_DATE="<date>" GIT_COMMITTER_DATE="<date>" git commit ...
 
 Look to the output format of the `date` command to understand how `<date>`
 should be formatted.
+
+## Merging stashed and remote changes
+
+Normally, to pull remote changes while preserving local changes, stash first
+and pull as follows:
+```sh
+git stash
+git pull origin master
+git stash pop
+```
+
+In the event of merge conflicts, the `git stash pop` command will fail. Use
+`git mergetool` to resolve the merge conflicts that arise. Once this is done,
+though, the stash will still exist. This is because tThe `git stash pop`
+command is a combination of `git stash apply` and `git stash drop`. Failure
+(i.e. merge conflicts) of the former prevents the latter from running.
+Therefore, to drop the stash after the merge conflicts are resolved, run:
+```sh
+git stash drop
+```
