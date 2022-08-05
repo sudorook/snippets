@@ -126,3 +126,14 @@ each submodule. The following example simply pulls from the master branch:
 ```
 git submodule foreach git pull origin master
 ```
+
+## Specify Git commit timestamps
+
+To set a desired timestamp, alter the `GIT_AUTHOR_DATE` and
+`GIT_COMMITTER_DATE` timestamps in the environment.
+```sh
+GIT_AUTHOR_DATE="<date>" GIT_COMMITTER_DATE="<date>" git commit ...
+```
+
+Look to the output format of the `date` command to understand how `<date>`
+should be formatted.
