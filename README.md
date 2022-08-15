@@ -11,6 +11,7 @@ often forget but are worth remembering.
  * [dd](dd.md)
  * [exiftool](exiftool.md])
  * [FFmpeg](ffmpeg.md)
+ * [Firefox](firefox.md)
  * [find](find.md)
  * [Fonts](fonts.md)
  * [GIMP](gimp.md)
