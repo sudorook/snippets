@@ -36,3 +36,19 @@ sudo pacman -S --overwrite "*" <package>
 
 Be mindful of pacsave files. They will be given preference during installation
 over the files shipped in packages.
+
+## Update keys in live environment
+
+If attempts to install packages result in PGP signature errors, update the
+keyring:
+```
+pacman -Sy archlinux-keyring
+```
+
+Should this not work, reset all the GPG keys and restart the GPG agent.
+```
+kilall gpg-agent
+rm -r /etc/pacman.d/gnupg/
+pacman-key --init
+pacman-key --populate archlinux
+```
