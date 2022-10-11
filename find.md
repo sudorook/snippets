@@ -6,6 +6,10 @@
 find . -type f -exec rename -a $'\n' ' ' {} \;
 ```
 
+Note, on Debian, `rename` installed by the `util-linux` meta-package is called
+`rename.ul`. The `rename` program in its repos is a Perl script with an
+incompatible API.
+
 ## Exclude path in `find` results
 
 ```
