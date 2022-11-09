@@ -9,6 +9,7 @@ often forget but are worth remembering.
  * [Beets](beets.md)
  * [Cinnamon](cinnamon.md)
  * [date](date.md)
+ * [dconf/gsettings](dconf.md)
  * [dd](dd.md)
  * [exiftool](exiftool.md])
  * [FFmpeg](ffmpeg.md)
