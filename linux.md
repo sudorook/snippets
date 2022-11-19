@@ -21,3 +21,18 @@ If audio playback over HDMI does not work (e.g. playback halts or speeds
 through files), add `intel_iommu=on,igfx_off` to the `GRUB_CMDLINE_LINUX`
 variable in `/etc/default/grub`. Be sure to rebuild the GRUB configuration file
 afterwards.
+
+## Get architecture and supported instruction sets
+
+To get the architecture and other information, run:
+```
+/lib/ld-linux-x86-64.so.2 --help
+```
+
+In Debian, run instead:
+```
+/lib64/ld-linux-x86-64.so.2 --help
+```
+
+The `/lib/ld-linux.so.2` symlinked to `/lib32/ld-linux.so.2` will not produce
+the same results.
