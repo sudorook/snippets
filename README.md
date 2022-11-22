@@ -34,6 +34,7 @@ often forget but are worth remembering.
  * [PDF](pdf.md)
  * [Printers](printers.md)
  * [R](R.md)
+ * [Rust](rust.md)
  * [Samba](samba.md)
  * [sed](sed.md)
  * [SSH](ssh.md)
