@@ -43,4 +43,5 @@ often forget but are worth remembering.
  * [UEFI](uefi.md)
  * [Vim](vim.md)
  * [wee-slack](wee-slack.md)
+ * [Windows](windows.md)
  * [zsh](zsh.md)
