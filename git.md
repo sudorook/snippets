@@ -1,5 +1,10 @@
 # Git
 
+## Get path to root of Git repository
+```
+git rev-parse --show-toplevel
+```
+
 ## Create and apply patches
 
 To create a patch against a branch, run:
