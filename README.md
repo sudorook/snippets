@@ -7,6 +7,7 @@ often forget but are worth remembering.
  * [Android](android.md)
  * [Bash](bash.md)
  * [Beets](beets.md)
+ * [C/C++](cpp.md)
  * [Cinnamon](cinnamon.md)
  * [date](date.md)
  * [dconf/gsettings](dconf.md)
