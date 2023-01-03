@@ -53,3 +53,13 @@ magick <input> -resize <width>x<height>! <output>
 
 Because `!` is a command in many shells, be sure to escape it (`\!`) in
 practice.
+
+
+## Crop images
+
+To crop images, use the `-crop` flag. Format is as follows:
+```
+magick <input> -crop <width>x<height>+<x offset>+<y offset> <output>
+```
+
+Coordinates start (0,0) at top left.
