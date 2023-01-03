@@ -36,3 +36,20 @@ magick <input> -rotate <angle> <output>
 
 Some images have built-in rotation metadata and will be oriented properly in
 most image viewers.
+
+
+## Resize images
+
+Use the `-resize` flag to resize images. Run:
+```
+magick <input> -resize <width>x<height> <output>
+```
+
+To break the aspect ratio when resizing, use a `!` on one of the dimensions.
+See below:
+```
+magick <input> -resize <width>x<height>! <output>
+```
+
+Because `!` is a command in many shells, be sure to escape it (`\!`) in
+practice.
