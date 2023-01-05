@@ -47,7 +47,7 @@ pacman -Sy archlinux-keyring
 
 Should this not work, reset all the GPG keys and restart the GPG agent.
 ```
-kilall gpg-agent
+killall gpg-agent
 rm -r /etc/pacman.d/gnupg/
 pacman-key --init
 pacman-key --populate archlinux
