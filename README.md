@@ -23,6 +23,7 @@ often forget but are worth remembering.
  * [grep](grep.md)
  * [Initramfs](initramfs.md)
  * [ImageMagick](imagemagick.md)
+ * [KDE](kde.md)
  * [kitty](kitty.md)
  * [KVM/libvirt](kvm.md)
  * [LaTeX](latex.md)
