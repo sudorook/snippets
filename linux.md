@@ -36,3 +36,12 @@ In Debian, run instead:
 
 The `/lib/ld-linux.so.2` symlinked to `/lib32/ld-linux.so.2` will not produce
 the same results.
+
+## Monitor directory for modified files
+
+To monitor `MODIFY` events for inodes in a directory `<dir>`, run:
+```
+inotifywait -m -e modify -r <dir>
+```
+
+Omit the `-e modify` flag to monitor all events (`READ`, etc.) instead.
