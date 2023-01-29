@@ -10,3 +10,10 @@ To download media when no downloader is present on the website:
 4. Monitor the network log for GET requests.
 5. Right-click the log entry and open the stream in a new tab.
 6. Save (`Ctrl+s`) to disk.
+
+## Disable "Private browsing" text label in tab bar
+
+In the `about:config` menu, disable:
+```
+browser.privatebrowsing.enable-new-indicator
+```
