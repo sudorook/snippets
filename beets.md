@@ -78,3 +78,15 @@ With an appropriate cover art file, simply run:
 ```
 beet embedart -f cover.jpg "<album>"
 ```
+
+## Making exact queries
+
+The QUERY string will match precisely if `<field>:<string>` is specified, and
+it allows regexes with `<field>::<string>`. However, short strings, when used
+with the `:` syntax, will nevertheless match many, many files as if a regex had
+been specified. Therefore, for any specific query, use `^` and `$` in a regex:
+```
+beet <command> '<field>::^<string>$'
+```
+
+Doing so will guarantee that the patterns will be matched.
