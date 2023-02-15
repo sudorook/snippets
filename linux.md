@@ -45,3 +45,22 @@ inotifywait -m -e modify -r <dir>
 ```
 
 Omit the `-e modify` flag to monitor all events (`READ`, etc.) instead.
+
+## Create on-demand swapfile
+
+To manually add more swap space, do as follows:
+```sh
+dd if=/dev/zero of=/swapfile bs=1M count=1024 status=progress
+chmod 0600 /swapfile
+mkswap -U clear /swapfile
+swapon /swapfile
+```
+
+The above creates 1 GiB of swap space. To create more, increase the value of
+`count=#`.
+
+To remove the file, run:
+```sh
+swapoff /swapfile
+rm -f /swapfile
+```
