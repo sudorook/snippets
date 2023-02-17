@@ -103,6 +103,10 @@ beet mbscan
 Adjust the command by running: `beet mbscan <query>` to only update specific
 files.
 
+**NOTE:** This command will remove any changes (e.g. fixed
+capitalization/spelling, additional metadata fields) to the files in the
+library. Only run this when existing tags have been systematically corrupted.
+
 ## List all album Musicbrainz IDs
 
 Use `beet list` and pass the `-a` (return albums) flag and use `-f` to format
