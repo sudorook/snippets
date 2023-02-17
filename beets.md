@@ -90,3 +90,15 @@ beet <command> '<field>::^<string>$'
 ```
 
 Doing so will guarantee that the patterns will be matched.
+
+## Scan library for missing MusicBrainz tags
+
+To scan the library and write missing tags to the Beets database, first enable
+the `mbscan` plugin by adding it to the `plugins: <list>` field in the
+`~/.config/beets/config.yaml` file. Then, run:
+```
+beet mbscan
+```
+
+Adjust the command by running: `beet mbscan <query>` to only update specific
+files.
