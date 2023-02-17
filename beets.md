@@ -102,3 +102,11 @@ beet mbscan
 
 Adjust the command by running: `beet mbscan <query>` to only update specific
 files.
+
+## List all album Musicbrainz IDs
+
+Use `beet list` and pass the `-a` (return albums) flag and use `-f` to format
+the output:
+```
+beet list -af '$mb_albumid: $album'
+```
