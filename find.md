@@ -28,7 +28,7 @@ find . -type d -name "node_modules" -prune -exec rm -rvf {} \;
 
 ## Restore bak files
 ```sh
-find . -type f -name "*.bak" -exec bash -c 'newfile="$(echo "${1}" | sed -e "s/_.*\.bak$//g")"; mv "${1}" "${newfile}"' bash {} \;
+find . -type f -name "*.bak" -exec bash -c 'newfile="$(echo "${1}" | sed -e "s/_[0-9]\+-[0-9]\+\.bak$//g")"; mv "${1}" "${newfile}"' bash {} \;
 ```
 
 ## Find broken symlinks
