@@ -57,3 +57,10 @@ Prefix the file or directory with `./`. (There is no need to escape the `:`.)
 ```
 scp ./<file> <user>@<address>:<path>
 ```
+
+
+## Run a command via SSH
+
+```
+ssh <user>@<hostname> <command>
+```
