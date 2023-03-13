@@ -2,7 +2,7 @@
 
 ## Profile function calls
 
-```
+```sh
 python -m cProfile <script>
 ```
 

@@ -4,7 +4,6 @@ Should the available information be lacking, look at the [FFmpeg
 wiki](https://trac.ffmpeg.org/wiki) first. It's much more useful than
 StackOverflow.
 
-
 ## Change output verbosity
 
 Copied from [this thread](https://ffmpeg.org/pipermail/ffmpeg-user/2013-December/018834.html).
@@ -29,16 +28,14 @@ Down:  `^[[B`
 Right: `^[[C` (matches Send/Que command to all matching filters)
 Left:  `^[[D` (matches cycle through available debug modes)
 
-
 ## Display the streams in a container
 
 To view the streams present in a file, use:
-```
+```sh
 ffprobe -v error -show_entries stream=index,codec_name,codec_type <input>
 ```
 
 (Or, simply run `ffprobe` without the extra arguments above.)
-
 
 ## Hardcode subtitles
 
@@ -49,7 +46,7 @@ documentation.
 ### Text-based subtitles (ass, srt, etc.)
 
 If you want to hardcode soft subtitles in a video, run:
-```
+```sh
 ffmpeg -i <input> -vf subtitles=<input> <output>
 ```
 
@@ -63,17 +60,16 @@ based ones, which are usually found in DVD/Blu-ray rips.
 ### Picture-based subtitles (sup, etc.)
 
 For picture-based subtitles, instead run:
-```
+```sh
 ffmpeg -i <input> -filter_complex "[0:v][0:s]overlay[v]" -map "[v]" -map 0:a <output>
 ```
 
 This will burn the first subtitle stream into the first video stream.
 
-
 # Offset subtitle times
 
 To shift all the timings for subtitles, run:
-```
+```sh
 ffmpeg -itsoffset <mm:ss.x> -i <input> -map 0:s:<stream> -c:s copy <output>
 ```
 
@@ -81,11 +77,10 @@ It is important to specify the `itsoffset` flag _before_ the input. The output
 format will be inferred by the file extension. It can also be specified by
 `-f`.
 
-
 ## Crop Video
 
 Run:
-```
+```sh
 ffmpeg -i <input> -filter:v 'crop=<width>:<height>:<x>:<y>' -codec:a copy <output>
 ```
 
@@ -95,7 +90,7 @@ top-left corner is located.
 
 To estimate the appropriate values for the crop filter, one can use the
 `cropdetect` feature. Run:
-```
+```sh
 ffmpeg -i <input> -filter:v cropdetect -codec:a copy -f null -
 ```
 
@@ -104,11 +99,10 @@ The output stream will show a moving estimate for the best crop setting.
 To avoid scanning the entire video stream, add the `-t <duration>` flag to the
 above command to specify the duration to scan.
 
-
 ## Extract streams into separate files
 
 To split all the streams in a video container into separate files, run:
-```
+```sh
 ffmpeg -i <input> -map 0:v -c copy <video output> \
        -map 0:a -c copy <audio output> -map 0:s -c copy <subtitle output>
 ```
@@ -131,13 +125,12 @@ it is compatibly with the stream, otherwise `ffmpeg` will exit with an error
 (e.g., when converting sup subtitles to srt) or will start reencoding
 automatically.
 
-
 ## Cut clips from a larger video file
 
 (It may be easier to just write a script that handles this...)
 
 To cut a bit out of a video:
-```
+```sh
 ffmpeg -i <input> -ss <mm:ss.x> -t <s> <output>
 ```
 
@@ -149,33 +142,31 @@ example, `-t 10.4` would make the clip last 10.4 seconds.
 If you want to set specific streams in the video, you can add the `-map`
 options described above. For example, to take the first video, audio, and
 subtitle streams, run:
-```
+```sh
 ffmpeg -i <input> -map 0:v -c:v copy -map 0:a:0 -c:a copy -map 0:s:0 -c copy \
        -ss <mm:ss.x> -t <s> <output>
 ```
-
 
 # Down-mix audio streams
 
 To combine many streams into a simpler layout, use `pan` to re-map audio
 streams. For example, the following will map the front left and front right
 streams to the left and right stereo:
-```
+```sh
 ffmpeg -i <input> -af "pan=stereo|c0=FL|c1=FR" <output>
 ```
 
 In the case where streams are to be down-mixed to stereo, simply use the `-ac` flag:
-```
+```sh
 ffmpeg -i <input> -ac 2 <output>
 ```
 
 Note that the above shorthand will drop the low frequency (LFE) stream.
 
-
 ## Join streams into a single file
 
 To join separate streams into a single container, run:
-```
+```sh
 ffmpeg -i <video> -i <audio> -i <subtitle> \
        -c:v copy -c:a copy -c:s copy <output>
 ```
@@ -188,43 +179,40 @@ It's also possible to do more complicated stuff, like using the same stream
 more than once and reencoding each duplicate differently (see the [map
 documentation](https://trac.ffmpeg.org/wiki/Map)).
 
-
 ## Copy chapters/metadata from one file to another
 
 The following copies all the data streams from `input1` and merges them with
 the metadata from `input0`:
-```
+```sh
 ffmpeg -i <input0> -i <input1> -map 1 -map_metadata 0 -c copy <output>
 ```
 
 Note that this only copies metadata, not fonts or other attachments.
 
 To copy chapter data, instead run:
-```
+```sh
 ffmpeg -i <input0> -i <input1> -map 1 -map_chapters 0 -c copy <output>
 ```
-
 
 ## Copy embedded fonts from one file to another
 
 The following copies the metadata from `input1` to `input0`:
-```
+```sh
 ffmpeg -i <input0> -i <input1> -map_chapters 1 \
   -map 0:v -map 0:a -c copy -map 0:s -map 1:s -map 0:t -map 1:t <output>
 ```
 
-
 ## Append fonts to a Matroska container
 
 To attach an opentype font file to a container, run:
-```
+```sh
 ffmpeg -i <input.mkv> -map 0 -c copy \
   -attach <font.otf> -metadata:s:t mimetype=application/vnd.ms-opentype \
   <output.mkv>
 ```
 
 For attaching a truetype font, instead run:
-```
+```sh
 ffmpeg -i <input.mkv> -map 0 -c copy \
   -attach <font.ttf> -metadata:s:t mimetype=application/x-truetype-font \
   <output.mkv>
@@ -233,14 +221,12 @@ ffmpeg -i <input.mkv> -map 0 -c copy \
 Multiple fonts can be attached to a single stream by adding multiple `-attach`
 lines. The font streams will be added and numbered at the end of the list.
 
-
 ## Dump all attachments in a video container
 
 To dump all the attached files in the current working directory, run:
-```
+```sh
 ffmpeg -dump_attachment:t "" -i <input>
 ```
-
 
 ## Change default streams
 
@@ -253,7 +239,7 @@ Remember that streams are indexed from 0.
 For example, to switch the default audio stream from the first to the second in
 a Matroska container with two audio streams (while keeping everything else
 intact), run:
-```
+```sh
 ffmpeg -i <input> -map 0 -disposition:a:1 default -disposition:a:0 none -c copy <output>
 ```
 
@@ -264,7 +250,6 @@ parameter.
 For another example, to disable showing any subtitle stream by default, use the
 `-disposition:s -default` flag.
 
-
 ## Concatenate videos
 
 See the [FFmpeg concatenation docs](https://trac.ffmpeg.org/wiki/Concatenate)
@@ -272,7 +257,7 @@ for full documentation.
 
 To simply concatenate two files, create a text file (e.g. files.lst) containing
 a list of files to be combined. Format is as follows:
-```
+```text
 file 'path/to/file1'
 file 'path/to/file2'
 ```
@@ -281,94 +266,88 @@ The files paths need to be encapsulated in single quotes, so avoid file names
 with single quotes in them.
 
 Then, pass the text file to FFmpeg with the `concat` flag:
-```
+```sh
 ffmpeg -safe 0 -f concat -i files.lst -c copy -scodec copy output.mkv
 ```
 
 The `-safe 0` flag may be necessary to bypass warnings about unsafe file names,
 such as those with spaces.
 
-
 ## Extract subtitles
 
 To extract an SRT text stream:
-```
+```sh
 ffmpeg -i <video>.<extension> <video>.srt
 ```
 
 For DVDSUB streams, extract into a Matroska container:
-```
+```sh
 ffmpeg -i <video> -map 0:s:0 -c:s dvdsub -f matroska subtitles.mkv
 ```
 
 The stream can be added to a video later via:
-```
+```sh
 ffmpeg -i <video> -i subtitles.mkv -c copy -c:s dvd_subtitle <new video>
 ```
-
 
 ## Increase probe size for codec detection
 
 When warnings appear and suggest increasing the 'analyzeduration' and
 'probesize' options (for example when reading PGS subtitle format), alter the
 `ffmpeg` command:
-```
+```sh
 ffmpeg -analyzeduration 50M -probesize 50M ...
 ```
 
 Increase the size until the warning disappears.
 
-
 ## Convert FLAC to MP3
 
-```
+```sh
 ffmpeg -i "<FLAC input>" -b:a 320k "<MP3 output>"
 ```
 
 The above uses the maximum MP3 bitrate of 320k for conversion. To reduce file
 size, reduce this value.
 
-
 ## Strip all metadata
 
 To remove attachments, subtitles, fonts, etc. from a container, run:
-```
+```sh
 ffmpeg -i <input> -map_metadata -1 -c:v copy -c:a copy <output>
 ```
 
 To strip chapter metadata instead, run:
-```
+```sh
 ffmpeg -i <input> -map_chapters -1 -c:v copy -c:a copy <output>
 ```
 
 Combine `-map_metadata -1` and `-map_chapters -1` to remove both.
 
-
 ## Extract metadata to file
 
 To dump existing metadata to a file, run:
-```
+```sh
 ffmpeg -i <input> -f ffmetadata <output>
 ```
 
 To load metadata, (e.g. after edits), run:
-```
+```sh
 ffmpeg -i <input> -i <ffmetadatafile> -map_metadata 1 ...
 ```
 
 The `<ffmetadatafile>` is the data produced by the first command.
 
-
 ## Merge streams
 
 To merge streams from two files, (e.g. add an audio stream to a video), run:
-```
+```sh
 ffmpeg -i <input 0> -i <input 1> -map 0 -map 1 -c copy <output>
 ```
 
 If some streams are to be omitted when merging, adjust the above command as
 needed. For example, to combine the video stream in one file with the audio of
 another, run:
-```
+```sh
 ffmpeg -i <input 0> -i <input 1> -map 0:v -map 1:a -c copy <output>
 ```

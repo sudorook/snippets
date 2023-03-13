@@ -2,13 +2,13 @@
 
 ## Get UUID for devices
 
-```
+```sh
 lsblk --fs
 ```
 
 ## Get PCI bus for NVME devices
 
-```
+```sh
 sudo dmesg | grep nvme
 ```
 
@@ -25,12 +25,12 @@ afterwards.
 ## Get architecture and supported instruction sets
 
 To get the architecture and other information, run:
-```
+```sh
 /lib/ld-linux-x86-64.so.2 --help
 ```
 
 In Debian, run instead:
-```
+```sh
 /lib64/ld-linux-x86-64.so.2 --help
 ```
 
@@ -40,7 +40,7 @@ the same results.
 ## Monitor directory for modified files
 
 To monitor `MODIFY` events for inodes in a directory `<dir>`, run:
-```
+```sh
 inotifywait -m -e modify -r <dir>
 ```
 

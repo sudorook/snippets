@@ -1,14 +1,15 @@
 # Git
 
 ## Get path to root of Git repository
-```
+
+```sh
 git rev-parse --show-toplevel
 ```
 
 ## Create and apply patches
 
 To create a patch against a branch, run:
-```
+```sh
 git format-patch <branch>
 ```
 
@@ -16,55 +17,55 @@ This will generate patch files at the base of the repository. Alternately, use
 `HEAD~#` or `<sha256>` instead of the branch name.
 
 To apply the patch and add the commit to the Git history, run:
-```
+```sh
 git am < <path/to/file.patch>
 ```
 
 ## Get number of commits in repository
 
-```
+```sh
 git rev-list --count --all
 ```
 
 ## Cleanup local repository
 
-```
+```sh
 git gc --prune=now --aggressive
 ```
 
 To find and prune all Git directories (starting from the current working
 directory), run:
-```
+```sh
 find . -type d -name ".git" -exec sh -c 'DIR="$(dirname "${1}")" && git -C "${DIR}" gc --prune=now --aggressive' sh {} \;
 ```
 
 ## Push a branch to a differently named remote branch
 
-```
+```sh
 git push <remote> <localbranch>:<remotebranch>
 ```
 
 ## Push a subset of commits to the repository
 
 To only some commits and not the full tree, use:
-```
+```sh
 git push <remote> <localbranch>~<# number commits behind HEAD>:<remotabranch>
 ```
 
 For example, to push all but the last 5 commits on master to remote master, run:
-```
+```sh
 git push origin master~5:master
 ```
 
 ## Pull from a differently named remote branch
 
-```
+```sh
 git pull <remote> <remotebranch>:<localbranch>
 ```
 
 ## Remove a file from the git history
 
-```
+```sh
 git filter-branch -f --index-filter \
   "git rm -rf --cached --ignore-unmatch <REGEX>" \
   --prune-empty --tag-name-filter cat -- --all
@@ -78,14 +79,13 @@ Replace `<REGEX>` with a pattern to match the file(s) to remove. The pattern
 may be a simple, hard-coded path. Then, force push to the remote repository
 (`git push -f origin master`).
 
-
 ## Repack a repository
 
-Some repositories have `.pack` file so large that they cannot fit in RAM when
+Some repositories have `.pack` file so large that it cannot fit in RAM when
 running `git gc`. It is possible to re-pack them so that they fit within file
 size constraints. For example, run:
 
-```
+```sh
 git repack -a -d --window-memory 100M --max-pack-size 1G
 ```
 
@@ -95,7 +95,7 @@ Adjust the above size thresholds as needed.
 
 To release an archived version of the source code (without the Git metadata and
 version history), run:
-```
+```sh
 git archive --prefix=<prefix> -o <output> <ID>
 ```
 
@@ -111,18 +111,17 @@ available formats.)
 
 `<ID>` refers to the branch, tag, commit hash to archive.
 
-
 ## Updating all submodules
 
 Update each Git submodule to their respecting remote HEAD by running:
-```
+```sh
 git pull --recurse-submodules
 ```
 
 (Add `--jobs=...` if you want downloads to run in parallel.)
 
 Note that if the submodules have not already been initialized, run instead:
-```
+```sh
 git submodule update --init --recursive
 ```
 
@@ -158,6 +157,7 @@ In the event of merge conflicts, the `git stash pop` command will fail. Use
 though, the stash will still exist. This is because tThe `git stash pop`
 command is a combination of `git stash apply` and `git stash drop`. Failure
 (i.e. merge conflicts) of the former prevents the latter from running.
+
 Therefore, to drop the stash after the merge conflicts are resolved, run:
 ```sh
 git stash drop

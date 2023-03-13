@@ -11,7 +11,7 @@ Should truncation occur, it is possible to restore the written Zsh history from
 memory using another Zsh shell, ideally one that was running a process
 throughout the interval of high memory usage (e.g. `top`).  Such processes are
 unlikely to have their resources dropped by the scheduler. Run:
-```
+```zsh
 fc -W ~/zsh_history_from_ram
 ```
 
