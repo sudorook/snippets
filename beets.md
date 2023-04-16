@@ -25,7 +25,7 @@ for dir in *; do
   if [ -d "${dir}" ]; then
     pushd "${dir}"
     for album in *; do
-      if [ -d "${dir}" ]; then
+      if [ -d "${album}" ]; then
         beet import -C -A -W "${album}"
       fi
     done
