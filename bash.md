@@ -79,3 +79,20 @@ trap 2
 
 These two invocations can be used to prevent a sensitive section of code from
 being interrupted.
+
+## Process `stdin` in functions
+
+When constructing functions to use as part of a sequence of pipes, one may
+require logic that processes standard input.
+
+To iterate over each line of standard input, use:
+```bash
+while read -r line
+  ...
+done <<< "$(< /dev/stdin)"
+```
+
+Alternatively, to store all the input in a variable, use:
+```bash
+var=$(< /dev/stdin)
+```
