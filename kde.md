@@ -21,3 +21,7 @@ Icons-only Task Manager...' menu.
 
 Open 'View' (`CTRL+m`, if top bar is disabled), and uncheck the 'Show in
 Groups' checkbox.
+
+## Close active window via keyboard
+
+To close the currently focused window, enter `Alt+F4`.
