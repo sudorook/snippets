@@ -59,3 +59,15 @@ magick <input> -crop <width>x<height>+<x offset>+<y offset> <output>
 ```
 
 Coordinates start (0,0) at top left.
+
+## Split an image into separate images
+
+To split an image into two equal halves along the vertical axis, run:
+```sh
+magick <image> -crop 50%x100% +repage <output>
+```
+
+Adjust the first percentage for width and the second for height. Using the same
+name for `<image>` and `<output>` will result in a sequence of files with
+`<input>-%d.<ext>`, where `%d` is an integer and `<ext>` is the extension of
+the input file.
