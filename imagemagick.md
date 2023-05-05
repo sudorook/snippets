@@ -71,3 +71,16 @@ Adjust the first percentage for width and the second for height. Using the same
 name for `<image>` and `<output>` will result in a sequence of files with
 `<input>-%d.<ext>`, where `%d` is an integer and `<ext>` is the extension of
 the input file.
+
+## Combine images
+
+To append a sequence of images along a single axis, run either:
+```sh
+magick -append <image1> <image2> ... <output>
+```
+or,
+```sh
+magick +append <image1> <image2> ... <output>
+```
+
+Using `-append` appends images vertically, and `+append` does so horizontally.
