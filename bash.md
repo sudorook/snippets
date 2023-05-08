@@ -96,3 +96,17 @@ Alternatively, to store all the input in a variable, use:
 ```bash
 var=$(< /dev/stdin)
 ```
+
+## Source scripts without executing
+
+To source a script, for example, to define variables and functions, wrap the
+execution logic (that is not to be executed) as follows:
+```bash
+
+if [ "$0" = "${BASH_SOURCE[0]}" ]; then
+  ...
+fi
+```
+
+Any code inside the `if` block will only be executed when the script itself is
+directly executed.
