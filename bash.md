@@ -110,3 +110,9 @@ fi
 
 Any code inside the `if` block will only be executed when the script itself is
 directly executed.
+
+## Print all ASCII characters in one string
+
+```bash
+for ((i=32;i<127;i++)) do printf "\\$(printf %03o "$i")"; done; printf "\n"
+```
