@@ -40,6 +40,7 @@ often forget but are worth remembering.
  * [Rust](rust.md)
  * [Samba](samba.md)
  * [sed](sed.md)
+ * [SELinux](selinux.md)
  * [SSH](ssh.md)
  * [Tar](tar.md)
  * [Text](text.md)
