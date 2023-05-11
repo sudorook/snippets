@@ -29,6 +29,7 @@ often forget but are worth remembering.
  * [LaTeX](latex.md)
  * [Linux](linux.md)
  * [mkvtoolnix](mkvtoolnix.md)
+ * [Neovim](neovim.md)
  * [Network](network.md)
  * [Pacman](pacman.md)
  * [parallel](parallel.md)
