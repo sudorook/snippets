@@ -20,3 +20,15 @@ fc-match -s <FONT>
 `FONT` can be string corresponding to a font exactly, or any string (e.g.
 'monospace'). Fonts are printed in the sequence programs will search when
 rendering fonts. 
+
+## Get the exact font name
+
+Often the font name will not match the file. To view the exact file name, parse
+the output from `fc-list`. The output is of the format:
+```
+<font file absolute path>: <font name>:style=<variant>
+```
+
+Look for the `<font name>` component of the output.
+
+Alternately, open the font file in FontForge or another font-editing programs.
