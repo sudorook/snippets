@@ -20,10 +20,11 @@ browser.privatebrowsing.enable-new-indicator
 
 ## Disable DNS over HTTPS
 
-Firefox by default will proxy DNS requests to CloudFlare. The idea is to block
+Firefox can proxy DNS requests to CloudFlare. This behavior is not the default
+but may be activated by some Add-ons. The rationale for the feature is to block
 man-in-the-middle attacks that redirect normal traffic and the DNS resolution
-step. However, this will cause DNS leaks, should network connections need to
-proxied through a specific server.
+step. However, this will cause DNS leaks, should one want to proxy network
+connections (including name resolution) through a specific server.
 
 Disable this setting by:
 1. De-selecting 'Enable DNS over HTTPS' in the Connection Settings submenu in
