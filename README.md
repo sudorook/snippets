@@ -20,6 +20,7 @@ often forget but are worth remembering.
  * [GIMP](gimp.md)
  * [Git](git.md)
  * [Google](google.md)
+ * [GNOME](gnome.md)
  * [grep](grep.md)
  * [Initramfs](initramfs.md)
  * [ImageMagick](imagemagick.md)
