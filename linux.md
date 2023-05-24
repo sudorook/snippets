@@ -64,3 +64,13 @@ To remove the file, run:
 swapoff /swapfile
 rm -f /swapfile
 ```
+
+## Log all event associated with a device in real time
+
+Install `evtest` and run:
+```
+sudo evtest
+```
+
+The program will prompt for a device to watch and will print all events as they
+occur.
