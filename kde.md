@@ -1,5 +1,11 @@
 # KDE Plasma
 
+## Horizontally / vertically maximize windows
+
+To horizontally maximize, right-click the 'Maximize' button.
+
+To vertically maximize, left-click the 'Maximize' button.
+
 ## Reduce width of icons in Icons-only Task Manager
 
 Icons that are more tall than wide can create the illusion that the application
