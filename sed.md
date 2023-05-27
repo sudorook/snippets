@@ -12,3 +12,12 @@ logging colorized terminal `stdout`, use:
 ```sh
 sed 's/\x1b\[[0-9;]*m//g'
 ```
+
+## Print all text after a regex match
+
+To match all text after a particular pattern, use:
+```sh
+... | sed -n '/<regex</,$p'
+```
+
+Note that this will include the pattern-matched line itself in the output.
