@@ -12,6 +12,7 @@ often forget but are worth remembering.
  * [date](date.md)
  * [dconf/gsettings](dconf.md)
  * [dd](dd.md)
+ * [Debian](debian.md)
  * [exiftool](exiftool.md])
  * [FFmpeg](ffmpeg.md)
  * [Firefox](firefox.md)
