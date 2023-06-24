@@ -5,6 +5,7 @@ often forget but are worth remembering.
 
  * [apt](apt.md)
  * [Android](android.md)
+ * [AUR](aur.md)
  * [Bash](bash.md)
  * [Beets](beets.md)
  * [C/C++](cpp.md)
