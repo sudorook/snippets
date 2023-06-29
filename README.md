@@ -36,6 +36,7 @@ often forget but are worth remembering.
  * [Network](network.md)
  * [Pacman](pacman.md)
  * [parallel](parallel.md)
+ * [podman](podman.md)
  * [Python](python.md)
  * [PDF](pdf.md)
  * [Printers](printers.md)
