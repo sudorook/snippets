@@ -91,6 +91,31 @@ Man page: `man podman-volume-<command>`
 | `prune`   | Remove all unused volumes.                       |
 | `rm`      | Remove one or more volumes.                      |
 
+### `podman-pod`
+
+Usage: `podman pod <command>`
+
+Man page: `man podman-pod-<command>`
+
+| Command   | Description                                                          |
+| :--       | :--                                                                  |
+| `create`  | Create a new pod.                                                    |
+| `exists`  | Check if a pod exists.                                               |
+| `inspect` | Display detailed information on a pod.                               |
+| `kill`    | Send a signal to the primary processes of the containers in the pod. |
+| `list`    | List all of the pods.                                                |
+| `logs`    | Fetch logs for the pod with one or more containers.                  |
+| `pause`   | Pause all the containers in a pod.                                   |
+| `prune`   | Remove all stopped pods and their containers.                        |
+| `restart` | Restart a pod.                                                       |
+| `rm`      | Remove one or more pods.                                             |
+| `stats`   | Display statistics for the containers in a pod.                      |
+| `start`   | Start a pod.                                                         |
+| `stop`    | Stop a pod.                                                          |
+| `top`     | Display running process in the pod.                                  |
+| `unpause` | Unpause all the containers in a pod.                                 |
+
+
 ## List current host-container port mappings
 
 ```sh
