@@ -4,7 +4,10 @@
 
 ### `podman`
 
-Usage: `podman <command>`
+Usage: `podman <command>` or `podman container <command>`
+
+Note that `podman list` is not correct. Use `podman ps` or `podman container
+list`, instead.
 
 Man page: `man podman-container-<command>`
 
