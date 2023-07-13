@@ -118,6 +118,18 @@ Man page: `man podman-pod-<command>`
 | `top`     | Display running process in the pod.                                  |
 | `unpause` | Unpause all the containers in a pod.                                 |
 
+### `podman-secret`
+
+Usage: `podman secret <command>`
+
+Man page: `man podman-secret-<command>`
+
+| Command   | Description                                          |
+| :--       | :--                                                  |
+| `create`  | Create a new secret.                                 |
+| `inspect` | Display detailed information on one or more secrets. |
+| `ls`      | List all available secrets.                          |
+| `rm`      | Remove one or more secrets.                          |
 
 ## List current host-container port mappings
 
@@ -130,3 +142,15 @@ podman port -l
 ```sh
 podman unshare cat /prof/self/uid_map
 ```
+## Pass secrets to containers
+
+To pass a file, for example one containing a password, run:
+```sh
+podman secret create <name> <path/to/secret>
+podman run --secret <name> ...
+```
+
+The file will be available within the container at `/run/secrets/<name>`.
+
+To copy the secret to the container environment instead, run `--secret
+<name>,type=env` instead.
