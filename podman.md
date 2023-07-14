@@ -142,6 +142,19 @@ podman port -l
 ```sh
 podman unshare cat /prof/self/uid_map
 ```
+
+## Run containers with non-overlapping user namespaces
+
+Use the `--userns=auto` flag. Doing so will allocate 1024 total UIDs for the
+namespace. To override this, run `--userns=auto:size=<SIZE>` where `<SIZE>` is
+the number of UIDs (min=1024, max=65536).
+
+Default settings can also be overridden in `/etc/containers/storage.conf`.
+
+```sh
+podman run --userns=auto
+```
+
 ## Pass secrets to containers
 
 To pass a file, for example one containing a password, run:
