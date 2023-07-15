@@ -143,6 +143,26 @@ podman port -l
 podman unshare cat /prof/self/uid_map
 ```
 
+## Mount and enter images
+
+It is possible to mount container images in a read-only filesystem. Run:
+```sh
+podman unhare
+podman image mount <image>
+```
+
+The `unshare` command drops the terminal into a user namespace. This is
+required because mounting is not possible in rootless (i.e. user) mode.
+
+When done, unmount as follows:
+```sh
+podman image unmount <image>
+exit
+```
+
+The above commands are to be run in the same TTY where `podman unshare` was
+run.
+
 ## Run containers with non-overlapping user namespaces
 
 Use the `--userns=auto` flag. Doing so will allocate 1024 total UIDs for the
