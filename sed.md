@@ -21,3 +21,9 @@ To match all text after a particular pattern, use:
 ```
 
 Note that this will include the pattern-matched line itself in the output.
+
+## Remove all text between and including a pattern
+
+```sh
+sed -e '/pattern1/,/pattern2/d'
+```
