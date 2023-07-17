@@ -21,6 +21,16 @@ To apply the patch and add the commit to the Git history, run:
 git am < <path/to/file.patch>
 ```
 
+To create and apply patches for changes that has not yet been committed, instead use:
+```sh
+git diff > patch.txt
+```
+
+and, to apply patches:
+```sh
+git apply patch.txt
+```
+
 ## Get number of commits in repository
 
 ```sh
