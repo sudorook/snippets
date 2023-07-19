@@ -143,6 +143,42 @@ podman port -l
 podman unshare cat /prof/self/uid_map
 ```
 
+## Inspect contents of downloaded images
+
+To view the rootfs manifest, run:
+```sh
+podman inspect <ID>
+```
+
+Use tab-completion to get the `<ID>` value reliably.
+
+For lower-level output, such as the container image format, use `skopeo`
+instead:
+```sh
+skopeo inspect --raw <ID>
+```
+
+## List containers
+
+To list running containers, run:
+```sh
+podman ps
+```
+
+To include all containers, including those not currently running, try:
+```sh
+podman ps --all
+```
+
+## Remove untagged images
+
+```sh
+podman image prune --all
+```
+
+Use `--force` as well to remove untagged images that are currently running.
+Otherwise, be sure to stop them first.
+
 ## Mount and enter images
 
 It is possible to mount container images in a read-only filesystem. Run:
