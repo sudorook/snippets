@@ -133,3 +133,10 @@ for ...; do
   fi
 done
 ```
+
+## Run command shadowed by alias
+
+Either specify the absolute path or use `command`:
+```sh
+command <cmd>
+```
