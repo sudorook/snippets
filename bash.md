@@ -119,16 +119,17 @@ for ((i=32;i<127;i++)) do printf "\\$(printf %03o "$i")"; done; printf "\n"
 
 ## Parallelize a `for` loop
 
-To quickly parallelize a `for` loop, use a subshell, `&`, and `wait` to run up
+To quickly parallelize a `for` loop, use a counter, `&`, and `wait` to run up
 to `N` commands at once. Run:
 ```bash
-N=4
-(for ...; do
-  ((i=i%N)); ((i++==0)) && wait
-  #
-  # <command> &
-  #
-done)
+N="$(nproc)"
+i=0
+for ...; do
+  <command> &
+  i=$((i+1))
+  if [ $((i%N)) -eq 0 ]; then
+    i=0
+    wait
+  fi
+done
 ```
-
-Note that the above will not work if the `-e` and `-u` flags are set.
