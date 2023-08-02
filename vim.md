@@ -72,3 +72,11 @@ logging colorized terminal `stdout`, use:
 ```vim
 s/[\x;[0-9;]*m//g
 ```
+
+## View Vim key notation
+
+To understand the meanings of various key notations, use Vim's `help` utility.
+
+```vim
+:help key-notation
+```
