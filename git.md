@@ -172,3 +172,13 @@ Therefore, to drop the stash after the merge conflicts are resolved, run:
 ```sh
 git stash drop
 ```
+
+## Rename a branch
+
+To rename a branch and migrate its corresponding reflog, run:
+```sh
+git branch -m <oldname> <newname>
+```
+
+Use `-M` instead of `-m` to force the renaming to happen should the `<newname>`
+branch already exist.
