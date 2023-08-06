@@ -132,6 +132,7 @@ for ...; do
     wait
   fi
 done
+wait
 ```
 
 ## Run command shadowed by alias
