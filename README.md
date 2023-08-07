@@ -30,6 +30,7 @@ often forget but are worth remembering.
  * [kitty](kitty.md)
  * [KVM/libvirt](kvm.md)
  * [LaTeX](latex.md)
+ * [LazyVim](lazyvim.md)
  * [Linux](linux.md)
  * [mkvtoolnix](mkvtoolnix.md)
  * [Neovim](neovim.md)
