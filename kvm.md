@@ -20,11 +20,13 @@
 ## Delete image snapshots
 
 To view available snapshots for a particular domain, run:
+
 ```sh
 virsh -c qemu:///system snapshot-list --domain <DOMAIN_ID>
 ```
 
 Delete any of the listed images by:
+
 ```sh
 virsh -c qemu:///system snapshot-delete --domain <DOMAIN_ID> <SNAPSHOT_ID>
 ```
@@ -46,6 +48,7 @@ virsh -c qemu:///system undefine --nvram <DOMAIN_ID>
 
 To convert a VirtualBox image in OVA format to a QCOW2 image compatible with
 QEMU, run:
+
 ```sh
 tar xf <input>
 qemu-img convert -O qcow2 <input> <output>

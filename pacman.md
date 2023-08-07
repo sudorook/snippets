@@ -6,8 +6,9 @@
 pacman -Ql <package>
 ```
 
-Alternatively, for a package archive that is not yet installed (e.g. `pacman
--Sw ...`), run:
+Alternatively, for a package archive that is not yet installed (e.g.
+`pacman -Sw ...`), run:
+
 ```sh
 pacman -Qlp <file>
 ```
@@ -18,7 +19,7 @@ pacman -Qlp <file>
 pacman -Qo <command>
 ```
 
-Note that this only applies to *available* commands from installed packages.
+Note that this only applies to _available_ commands from installed packages.
 Pacman won't search all the available packages.
 
 `pacman -Qo` can also be used on file paths to reveal which package installed
@@ -28,6 +29,7 @@ it.
 
 If a package is installed incorrectly or the installation is broken, overwrite
 existing files from the repository package. Run:
+
 ```sh
 sudo pacman -S --overwrite "*" <package>
 ```
@@ -39,11 +41,13 @@ over the files shipped in packages.
 
 If attempts to install packages result in PGP signature errors, update the
 keyring:
+
 ```sh
 pacman -Sy archlinux-keyring
 ```
 
 Should this not work, reset all the GPG keys and restart the GPG agent.
+
 ```sh
 killall gpg-agent
 rm -r /etc/pacman.d/gnupg/

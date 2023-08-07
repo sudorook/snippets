@@ -14,6 +14,7 @@ To download media when no downloader is present on the website:
 ## Disable "Private browsing" text label in tab bar
 
 In the `about:config` menu, disable:
+
 ```
 browser.privatebrowsing.enable-new-indicator
 ```
@@ -27,6 +28,7 @@ step. However, this will cause DNS leaks, should one want to proxy network
 connections (including name resolution) through a specific server.
 
 Disable this setting by:
+
 1. De-selecting 'Enable DNS over HTTPS' in the Connection Settings submenu in
    `about:preferences`, or
 2. Setting `network.dns.disablePrefetch` to `true` in `about:config`.

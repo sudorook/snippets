@@ -2,12 +2,13 @@
 
 ## Extract substrings from variables
 
-Use `#` and `##` to match from the start of a string and return the shortest
-and longest possible match, respectively. Alternatively, use `%` and `%%` for
+Use `#` and `##` to match from the start of a string and return the shortest and
+longest possible match, respectively. Alternatively, use `%` and `%%` for
 matching from the end of strings. After expansion, what is returned is the
 remaining portions of the string that were unmatched.
 
 To illustrate, the following (result in comment):
+
 ```bash
 var="one.two.three.four"
 ${var}     # one.two.three.four
@@ -33,6 +34,7 @@ When applied to an array (subscripted by `[@]` or `[*]`, the pattern is applied
 to each item. Items are then returned as a list.
 
 An alternate method is to use the `@` and an operator:
+
 ```bash
 ${var@U} # all uppercase
 ${var@u} # 1st character uppercase
@@ -54,25 +56,28 @@ ${var@L} # all lowercase
 ## Logging output of a bash script
 
 Rather than embed `echo` in several places of a script, run:
+
 ```bash
 sh -vx <script>
 ```
 
-`-v` will cause each command to be echoed before running, and `-x` will echo
-the output of each command. This can also be accomplished by setting (`set
--vx`) after the shebang in the script itself.
+`-v` will cause each command to be echoed before running, and `-x` will echo the
+output of each command. This can also be accomplished by setting (`set -vx`)
+after the shebang in the script itself.
 
 Add the `-n` flag check syntax without executing the script.
 
 ## Prevent interrupt
 
 To prevent the user from interrupting a process, add:
+
 ```bash
 trap '' 2
 ```
 
 The signal `2` corresponds to user interrupt (`CTRL+C`). To undo this and
 re-enable interrupts, use:
+
 ```bash
 trap 2
 ```
@@ -86,6 +91,7 @@ When constructing functions to use as part of a sequence of pipes, one may
 require logic that processes standard input.
 
 To iterate over each line of standard input, use:
+
 ```bash
 while read -r line
   ...
@@ -93,6 +99,7 @@ done <<< "$(< /dev/stdin)"
 ```
 
 Alternatively, to store all the input in a variable, use:
+
 ```bash
 var=$(< /dev/stdin)
 ```
@@ -101,6 +108,7 @@ var=$(< /dev/stdin)
 
 To source a script, for example, to define variables and functions, wrap the
 execution logic (that is not to be executed) as follows:
+
 ```bash
 
 if [ "$0" = "${BASH_SOURCE[0]}" ]; then
@@ -119,8 +127,9 @@ for ((i=32;i<127;i++)) do printf "\\$(printf %03o "$i")"; done; printf "\n"
 
 ## Parallelize a `for` loop
 
-To quickly parallelize a `for` loop, use a counter, `&`, and `wait` to run up
-to `N` commands at once. Run:
+To quickly parallelize a `for` loop, use a counter, `&`, and `wait` to run up to
+`N` commands at once. Run:
+
 ```bash
 N="$(nproc)"
 i=0
@@ -138,6 +147,7 @@ wait
 ## Run command shadowed by alias
 
 Either specify the absolute path or use `command`:
+
 ```sh
 command <cmd>
 ```

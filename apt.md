@@ -8,6 +8,7 @@ dpkg-query -S <absolute path>
 
 This command can be extended to show which packages installed any given command
 `CMD`. Combine `dpkg-query` with `which` as follows:
+
 ```sh
 dpkg-query -S $(which <CMD>)
 ```

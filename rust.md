@@ -4,6 +4,7 @@
 
 To exclusively use crates packaged by Debian and avoid entirely the use of
 `crates.io`, create a `${HOME}/.cargo/config.toml` file and add:
+
 ```toml
 [net]
 offline = true

@@ -9,7 +9,6 @@ ssh-keygen -t rsa -b 4096 -o -a 100 -f ~/.ssh/<id>_rsa -q -N ""
 Note: The -o flag specifies that the key be saved in the new OpenSSH key format
 (v6.5, 2014), which is incompatible with older versions.
 
-
 ## Use SSH key to login to remote server
 
 ```sh
@@ -47,6 +46,7 @@ of `yes`, you can specify a time limit (e.g. 1h) so that the connection closes
 eventually.
 
 To manually kill the background connection, run:
+
 ```sh
 ssh -O exit <user>@<server>
 ```
@@ -54,10 +54,10 @@ ssh -O exit <user>@<server>
 ## Copy a file with a colon in the file name
 
 Prefix the file or directory with `./`. (There is no need to escape the `:`.)
+
 ```sh
 scp ./<file> <user>@<address>:<path>
 ```
-
 
 ## Run a command via SSH
 

@@ -3,6 +3,7 @@
 ## Convert DOS to Unix format
 
 To convert from `dos` to `unix` format, run:
+
 ```sh
 dos2unix <file>
 ```
@@ -20,8 +21,9 @@ present.
 
 ## Watch files
 
-To watch the contents of a text file, for example a log file, for newly
-appended data, run:
+To watch the contents of a text file, for example a log file, for newly appended
+data, run:
+
 ```sh
 tail -f <log file>
 ```

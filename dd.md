@@ -30,8 +30,8 @@ Requires pzstd, pixz, or pigz, depending of the type of compression used.
 sudo dd if=/dev/DEVICE bs=1M status=progress | pzstd > IMAGE.img.zst
 ```
 
-DEVICE represents the device name, e.g. sda or mmcblk0, and IMAGE is the
-desired name to call the compressed image.
+DEVICE represents the device name, e.g. sda or mmcblk0, and IMAGE is the desired
+name to call the compressed image.
 
 ## Write (in parallel) compressed backup image to disk
 
@@ -41,5 +41,5 @@ Requires pzstd, pixz or pigz, depending of the type of compression used.
 sudo sh -c "pzstd -d < IMAGE.img.zst > /dev/DEVICE" && sync
 ```
 
-DEVICE represents the device name, e.g. sda or mmcblk0, and IMAGE is the
-desired name to call the compressed image.
+DEVICE represents the device name, e.g. sda or mmcblk0, and IMAGE is the desired
+name to call the compressed image.

@@ -5,6 +5,7 @@
 First, make sure that the `R_LIBS_USER` environment variable is set, that the
 directory it specifies exists, and that the current user has write permissions
 for it. Then, run:
+
 ```sh
 Rscript -e "pkg <- readLines(\"<list>\"); install.packages(pkg, lib=\"${R_LIBS_USER}\", repo='https://cloud.r-project.org/')"
 ```

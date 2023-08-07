@@ -9,6 +9,7 @@ git rev-parse --show-toplevel
 ## Create and apply patches
 
 To create a patch against a branch, run:
+
 ```sh
 git format-patch <branch>
 ```
@@ -17,16 +18,20 @@ This will generate patch files at the base of the repository. Alternately, use
 `HEAD~#` or `<sha256>` instead of the branch name.
 
 To apply the patch and add the commit to the Git history, run:
+
 ```sh
 git am < <path/to/file.patch>
 ```
 
-To create and apply patches for changes that has not yet been committed, instead use:
+To create and apply patches for changes that has not yet been committed, instead
+use:
+
 ```sh
 git diff > patch.txt
 ```
 
 and, to apply patches:
+
 ```sh
 git apply patch.txt
 ```
@@ -45,6 +50,7 @@ git gc --prune=now --aggressive
 
 To find and prune all Git directories (starting from the current working
 directory), run:
+
 ```sh
 find . -type d -name ".git" -exec sh -c 'DIR="$(dirname "${1}")" && git -C "${DIR}" gc --prune=now --aggressive' sh {} \;
 ```
@@ -58,11 +64,13 @@ git push <remote> <localbranch>:<remotebranch>
 ## Push a subset of commits to the repository
 
 To only some commits and not the full tree, use:
+
 ```sh
 git push <remote> <localbranch>~<# number commits behind HEAD>:<remotabranch>
 ```
 
 For example, to push all but the last 5 commits on master to remote master, run:
+
 ```sh
 git push origin master~5:master
 ```
@@ -85,8 +93,8 @@ git reflog expire --expire=now --all
 git gc --aggressive --prune=now
 ```
 
-Replace `<REGEX>` with a pattern to match the file(s) to remove. The pattern
-may be a simple, hard-coded path. Then, force push to the remote repository
+Replace `<REGEX>` with a pattern to match the file(s) to remove. The pattern may
+be a simple, hard-coded path. Then, force push to the remote repository
 (`git push -f origin master`).
 
 ## Repack a repository
@@ -105,6 +113,7 @@ Adjust the above size thresholds as needed.
 
 To release an archived version of the source code (without the Git metadata and
 version history), run:
+
 ```sh
 git archive --prefix=<prefix> -o <output> <ID>
 ```
@@ -115,8 +124,8 @@ of the repository in the currently working directory. Using `--prefix` allows
 files to extracted to a directory instead. Be sure to include a '/' in the
 prefix string.
 
-`<output>` is the name of the archive. Specify the type of compression used
-with the `--format` parameter. (Run `git archive --list` to see a list of the
+`<output>` is the name of the archive. Specify the type of compression used with
+the `--format` parameter. (Run `git archive --list` to see a list of the
 available formats.)
 
 `<ID>` refers to the branch, tag, commit hash to archive.
@@ -124,6 +133,7 @@ available formats.)
 ## Updating all submodules
 
 Update each Git submodule to their respecting remote HEAD by running:
+
 ```sh
 git pull --recurse-submodules
 ```
@@ -131,20 +141,23 @@ git pull --recurse-submodules
 (Add `--jobs=...` if you want downloads to run in parallel.)
 
 Note that if the submodules have not already been initialized, run instead:
+
 ```sh
 git submodule update --init --recursive
 ```
 
 One can also use the `foreach` option to execute commands or a shell script in
 each submodule. The following example simply pulls from the master branch:
+
 ```
 git submodule foreach git pull origin master
 ```
 
 ## Specify Git commit timestamps
 
-To set a desired timestamp, alter the `GIT_AUTHOR_DATE` and
-`GIT_COMMITTER_DATE` timestamps in the environment.
+To set a desired timestamp, alter the `GIT_AUTHOR_DATE` and `GIT_COMMITTER_DATE`
+timestamps in the environment.
+
 ```sh
 GIT_AUTHOR_DATE="<date>" GIT_COMMITTER_DATE="<date>" git commit ...
 ```
@@ -154,8 +167,9 @@ should be formatted.
 
 ## Merging stashed and remote changes
 
-Normally, to pull remote changes while preserving local changes, stash first
-and pull as follows:
+Normally, to pull remote changes while preserving local changes, stash first and
+pull as follows:
+
 ```sh
 git stash
 git pull origin master
@@ -164,11 +178,12 @@ git stash pop
 
 In the event of merge conflicts, the `git stash pop` command will fail. Use
 `git mergetool` to resolve the merge conflicts that arise. Once this is done,
-though, the stash will still exist. This is because tThe `git stash pop`
-command is a combination of `git stash apply` and `git stash drop`. Failure
-(i.e. merge conflicts) of the former prevents the latter from running.
+though, the stash will still exist. This is because the `git stash pop` command
+is a combination of `git stash apply` and `git stash drop`. Failure (i.e. merge
+conflicts) of the former prevents the latter from running.
 
 Therefore, to drop the stash after the merge conflicts are resolved, run:
+
 ```sh
 git stash drop
 ```
@@ -176,6 +191,7 @@ git stash drop
 ## Rename a branch
 
 To rename a branch and migrate its corresponding reflog, run:
+
 ```sh
 git branch -m <oldname> <newname>
 ```

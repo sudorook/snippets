@@ -14,8 +14,9 @@ icons are too widely spaced.
 To manually reduce the icon width, reduce the `horizontalMargins()` function in
 `/usr/share/plasma/plasmoids/org.kde.plasma.taskmanager/contents/ui/code/layout.js`
 as follows:
+
 ```js
-return (taskFrame.margins.left + taskFrame.margins.right) * spacingAdjustment - 2;
+return ((taskFrame.margins.left + taskFrame.margins.right) * spacingAdjustment - 2);
 ```
 
 `taskFrame.margins.left` and`taskFrame.margins.right` are global settings with
@@ -25,8 +26,8 @@ Icons-only Task Manager...' menu.
 
 ## Disable 'Downloads'-directory date sections in Dolphin
 
-Open 'View' (`CTRL+m`, if top bar is disabled), and uncheck the 'Show in
-Groups' checkbox.
+Open 'View' (`CTRL+m`, if top bar is disabled), and uncheck the 'Show in Groups'
+checkbox.
 
 ## Close active window via keyboard
 

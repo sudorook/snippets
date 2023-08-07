@@ -3,19 +3,20 @@
 ## Change default terminal application
 
 Change the default terminal in GNOME or Cinnamon:
-```
+
+```sh
 gsettings set org.cinnamon.desktop.default-applications.terminal exec '<TERMINAL>'
 gsettings set org.cinnamon.desktop.default-applications.terminal exec-arg '<ARGS>'
 ```
 
-```
+```sh
 gsettings set org.gnome.desktop.default-applications.terminal exec '<TERMINAL>'
 gsettings set org.gnome.desktop.default-applications.terminal exec-arg '<ARGS>'
 ```
 
-For most cases, `<ARGS>` can be left untouched. The `<TERMINAL>` variable can
-be the name of the executable or its absolute path. Additionally, for Debian,
-one can instead set the default terminal to `/usr/bin/x-terminal-emulator`, a
+For most cases, `<ARGS>` can be left untouched. The `<TERMINAL>` variable can be
+the name of the executable or its absolute path. Additionally, for Debian, one
+can instead set the default terminal to `/usr/bin/x-terminal-emulator`, a
 symlink to the default terminal that can be set via `update-alternatives`.
 
 **Note:** For desktop applications (programs run through their `.desktop`
@@ -26,7 +27,8 @@ symlink the desired terminal to `/usr/local/bin/gnome-terminal`.
 
 To restore the terminal settings to the default terminal (likely GNOME
 Terminal):
-```
+
+```sh
 gsettings reset-recursively org.cinnamon.desktop.default-applications.terminal
 gsettings reset-recursively org.gnome.desktop.default-applications.terminal
 ```

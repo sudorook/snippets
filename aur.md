@@ -3,7 +3,8 @@
 ## Update `sha256sums` automatically
 
 After updating the version numbers and/or URLs, run:
-```
+
+```sh
 updpkgsums
 ```
 
