@@ -32,6 +32,7 @@ often forget but are worth remembering.
  * [LaTeX](latex.md)
  * [LazyVim](lazyvim.md)
  * [Linux](linux.md)
+ * [Meson](meson.md)
  * [mkvtoolnix](mkvtoolnix.md)
  * [Neovim](neovim.md)
  * [Network](network.md)
