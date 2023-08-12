@@ -198,3 +198,13 @@ git branch -m <oldname> <newname>
 
 Use `-M` instead of `-m` to force the renaming to happen should the `<newname>`
 branch already exist.
+
+## Clone specific tags or branches
+
+Use the `-b` (`--branch`) flag when cloning to get a specific branch:
+
+```sh
+git clone <url> -b <branch>
+```
+
+The `-b` flag will also take tags and detaches from HEAD.
