@@ -41,33 +41,13 @@ ffprobe -v error -show_entries stream=index,codec_name,codec_type <input>
 
 ## Hard-code subtitles
 
-Use the `subtitles` video filter to hard-code subtitles in the video:
-
-```sh
-ffmpeg -i <input> -filter:v 'subtitles=<subtitle>' -codec:a copy <output>
-```
-
-Here, `<subtitle>` is the path to the subtitle file.
-
-Subtitles can additionally use custom fonts, etc. Pass additional values to the
-`subtitles` video format filter.
-
-```sh
-ffmpeg -i <input> \
-  -filter:v "subtitles=<subtitle>:force_style='FontName=<fontname>,Fontsize=<size>'" \
-  -codec:a copy <output>
-```
-
-`<fontname>` is the font family name, including style (e.g. 'Bold', 'Italic',
-etc.), and `<size>` is the font size.
-
 See the
 [FFmpeg subtitle docs](https://trac.ffmpeg.org/wiki/HowToBurnSubtitlesIntoVideo)
 for complete documentation.
 
 ### Text-based subtitles (ass, srt, etc.)
 
-If you want to hardcode soft subtitles in a video, run:
+If you want to hard-code text subtitles in a video, run:
 
 ```sh
 ffmpeg -i <input> -vf subtitles=<input> <output>
@@ -76,6 +56,18 @@ ffmpeg -i <input> -vf subtitles=<input> <output>
 In this example, `<input>` contains a single subtitle stream that FFmpeg will
 automatically pick up through `subtitles=<input>`. If using an external subtitle
 file, use `subtitles=<external subfile>` instead.
+
+Subtitles can additionally use custom fonts, etc. Pass additional values to the
+`subtitles` video format filter.
+
+```sh
+ffmpeg -i <input> \
+  -filter:v "subtitles=<subtitle>:force_style='FontName=<fontname>,Fontsize=<size>'" \
+  <output>
+```
+
+`fontname` is the font family, including style (e.g. 'Bold' or 'Italic'), and
+`size` is the font size.
 
 Note that this will only work with text based (ass, srt) subtitles, not image
 based ones, which are usually found in DVD/Blu-ray rips.
