@@ -39,7 +39,27 @@ ffprobe -v error -show_entries stream=index,codec_name,codec_type <input>
 
 (Or, simply run `ffprobe` without the extra arguments above.)
 
-## Hardcode subtitles
+## Hard-code subtitles
+
+Use the `subtitles` video filter to hard-code subtitles in the video:
+
+```sh
+ffmpeg -i <input> -filter:v 'subtitles=<subtitle>' -codec:a copy <output>
+```
+
+Here, `<subtitle>` is the path to the subtitle file.
+
+Subtitles can additionally use custom fonts, etc. Pass additional values to the
+`subtitles` video format filter.
+
+```sh
+ffmpeg -i <input> \
+  -filter:v "subtitles=<subtitle>:force_style='FontName=<fontname>,Fontsize=<size>'" \
+  -codec:a copy <output>
+```
+
+`<fontname>` is the font family name, including style (e.g. 'Bold', 'Italic',
+etc.), and `<size>` is the font size.
 
 See the
 [FFmpeg subtitle docs](https://trac.ffmpeg.org/wiki/HowToBurnSubtitlesIntoVideo)
