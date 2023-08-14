@@ -82,7 +82,7 @@ ffmpeg -i <input> -filter_complex "[0:v][0:s]overlay[v]" -map "[v]" -map 0:a <ou
 
 This will burn the first subtitle stream into the first video stream.
 
-# Offset subtitle times
+## Offset subtitle times
 
 To shift all the timings for subtitles, run:
 
@@ -135,8 +135,9 @@ If there is more than one stream for video/audio/etc., you can specify one with
 the input file.
 
 The example above uses `-c copy`, which simply copies the codec found in the
-file. This is quickest, as `ffmpeg` will not have to reencode anything. However,
-if you wish to specify a different format, replace `copy` with your preference.
+file. This is quickest, as `ffmpeg` will not have to re-encode anything.
+However, if you wish to specify a different format, replace `copy` with your
+preference.
 
 Note that when specifying the output file extension, you should take care that
 it is compatibly with the stream, otherwise `ffmpeg` will exit with an error
@@ -200,7 +201,7 @@ video. Useful for foreign releases where audio tracks are supplied in separate
 files.
 
 It's also possible to do more complicated stuff, like using the same stream more
-than once and reencoding each duplicate differently (see the
+than once and re-encoding each duplicate differently (see the
 [map documentation](https://trac.ffmpeg.org/wiki/Map)).
 
 ## Copy chapters/metadata from one file to another
