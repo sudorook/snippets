@@ -117,6 +117,8 @@ The output stream will show a moving estimate for the best crop setting.
 To avoid scanning the entire video stream, add the `-t <duration>` flag to the
 above command to specify the duration to scan.
 
+[See also](https://ffmpeg.org/ffmpeg-filters.html#crop)
+
 ## Extract streams into separate files
 
 To split all the streams in a video container into separate files, run:
