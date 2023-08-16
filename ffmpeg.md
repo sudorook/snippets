@@ -398,18 +398,18 @@ another, run:
 ffmpeg -i <input 0> -i <input 1> -map 0:v -map 1:a -c copy <output>
 ```
 
-## Shift audio-video syncronization
+## Shift audio-video synchronization
 
-Delay audio by 3 seconds:
+To delay audio by 3 seconds:
 
 ```sh
-ffmpeg -i input.mov -itsoffset 3 -i input.mov -map 0:v -map 1:a -codec:a copy -codec:v copy output.mov
+ffmpeg -i <input> -itsoffset 3 -i <input> -map 0:v -map 1:a -codec:a copy -codec:v copy <output>
 ```
 
-Delay video by 3 seconds (i.e. advance audio by 3 seconds):
+To delay video by 3 seconds (i.e. advance audio by 3 seconds):
 
-```
-ffmpeg -i input.mov -itsoffset 3 -i input.mov -map 1:v -map 0:a -codec:a copy -codec:v copy output.mov
+```sh
+ffmpeg -i <input> -itsoffset 3 -i <input> -map 1:v -map 0:a -codec:a copy -codec:v copy <output>
 ```
 
 The second `-i` flag must come _immediately after_ the `-itsoffset` flag.
