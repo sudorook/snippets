@@ -481,3 +481,42 @@ ffmpeg -i <input> -filter:v 'transpose=1,transpose=1' -codec:a copy <output>
 ```
 
 [See also](https://stackoverflow.com/questions/3937387/rotating-videos-with-ffmpeg)
+
+### Alter playback speed
+
+To speed up or slow down media, use the `setpts` video filter and/or the
+`atempo` audio filter.
+
+The syntax for the `setpts` filter is `setpts=<factor>*PTS` where `<factor>` is
+the scaling factor. Calculate the value as follows:
+
+```
+factor = 1 / speed
+```
+
+So, for example, `factor=4` to run at quarter speed and `factor=0.5` runs at
+double speed.
+
+The syntax for the `atempo` filter for audio is `atempo=<factor>`, where
+`factor` is a number between 0.5 and 2. To scale the audio speed to greater
+values, use `atempo=<factor>,atempo=<factor>`. This will set the rate to
+`factor*factor`. Note here that the factor's value is not inverted like that for
+the `setpts` filter.
+
+Examples below:
+
+```sh
+# Quarter the speed
+ffmpeg -i <input> -filter:v 'setpts=<int>*PTS' -filter:a 'atempo=0.5,atempo=0.5' <output>
+
+# Halve the speed
+ffmpeg -i <input> -filter:v 'setpts=2*PTS' -filter:a 'atempo=0.5' <output>
+
+# Double the speed
+ffmpeg -i <input> -filter:v 'setpts=0.5*PTS' -filter:a 'atempo=2' <output>
+
+# Quadruple the speed
+ffmpeg -i <input> -filter:v 'setpts=0.25*PTS' -filter:a 'atempo=2,atempo=2' <output>
+```
+
+[See also](https://trac.ffmpeg.org/wiki/How%20to%20speed%20up%20/%20slow%20down%20a%20video)
