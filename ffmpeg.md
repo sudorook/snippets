@@ -413,3 +413,15 @@ ffmpeg -i <input> -itsoffset 3 -i <input> -map 1:v -map 0:a -codec:a copy -codec
 ```
 
 The second `-i` flag must come _immediately after_ the `-itsoffset` flag.
+
+## Change the frame rate
+
+To change the frame rate, pass the `fps` flag to the video filter:
+
+```sh
+ffmpeg -i <input> -filter:v 'fps=fps=<VAL>' -codec:a copy <output>
+```
+
+where `<VAL>` is the new frames-per-second value.
+
+[See also](https://trac.ffmpeg.org/wiki/ChangingFrameRate)
