@@ -454,3 +454,13 @@ ffmpeg -i <input> -filter:v 'scale=-1:<width>' -codec:a copy <output>
 ```
 
 [See also](https://trac.ffmpeg.org/wiki/Scaling)
+
+## Reverse video and/or audio
+
+To reverse a video, separate filters are needed for video and audio:
+
+```sh
+ffmpeg -i <input> -filter:v 'reverse' -filter:a 'areverse' <output>
+```
+
+[See also](https://video.stackexchange.com/questions/17738/how-to-use-ffmpeg-command-for-reverse-video)
