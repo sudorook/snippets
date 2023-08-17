@@ -425,3 +425,15 @@ ffmpeg -i <input> -filter:v 'fps=fps=<VAL>' -codec:a copy <output>
 where `<VAL>` is the new frames-per-second value.
 
 [See also](https://trac.ffmpeg.org/wiki/ChangingFrameRate)
+
+## Remove streams from a container
+
+It is possible to remove all streams from a media file. For example, to remove
+audio, run:
+
+```sh
+ffmpeg -i <input> -codec:v copy -an <output>
+```
+
+which uses `-an` to remove audio. To remove video or subtitles, run `-vn` or
+`-sn`, respectively.
