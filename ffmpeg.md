@@ -437,3 +437,20 @@ ffmpeg -i <input> -codec:v copy -an <output>
 
 which uses `-an` to remove audio. To remove video or subtitles, run `-vn` or
 `-sn`, respectively.
+
+## Resize video
+
+To resize a video, re-encode it while passing `scale` to the video filter:
+
+```sh
+ffmpeg -i <input> -filter:v 'scale=<height>:<width>' -codec:a copy <output>
+```
+
+Set either `width` or `height` to `-1` to maintain the aspect ratio. For
+example:
+
+```sh
+ffmpeg -i <input> -filter:v 'scale=-1:<width>' -codec:a copy <output>
+```
+
+[See also](https://trac.ffmpeg.org/wiki/Scaling)
