@@ -464,3 +464,20 @@ ffmpeg -i <input> -filter:v 'reverse' -filter:a 'areverse' <output>
 ```
 
 [See also](https://video.stackexchange.com/questions/17738/how-to-use-ffmpeg-command-for-reverse-video)
+
+## Rotate video
+
+To rotate video streams, use the `transpose` video filter:
+
+```sh
+# Rotate 90 degrees clockwise
+ffmpeg -i <input> -filter:v 'transpose=1' -codec:a copy <output>
+
+# Rotate 90 degrees counter-clockwise
+ffmpeg -i <input> -filter:v 'transpose=2' -codec:a copy <output>
+
+# Rotate 180 degrees
+ffmpeg -i <input> -filter:v 'transpose=1,transpose=1' -codec:a copy <output>
+```
+
+[See also](https://stackoverflow.com/questions/3937387/rotating-videos-with-ffmpeg)
