@@ -32,3 +32,16 @@ Disable this setting by:
 1. De-selecting 'Enable DNS over HTTPS' in the Connection Settings submenu in
    `about:preferences`, or
 2. Setting `network.dns.disablePrefetch` to `true` in `about:config`.
+
+## Re-enable scrolling on websites where scrolling is disabled
+
+In the web console, enable pasting by typing (`allow pasting`) and then enter:
+
+```js
+var r = "html,body{overflow:auto !important;}";
+var s = document.createElement("style");
+s.type = "text/css";
+s.appendChild(document.createTextNode(r));
+document.body.appendChild(s);
+void 0;
+```
