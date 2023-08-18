@@ -45,3 +45,14 @@ s.appendChild(document.createTextNode(r));
 document.body.appendChild(s);
 void 0;
 ```
+
+## Delete element in website
+
+1. Hover over the element and right-click.
+2. Select 'Inspect (Q)' from the context menu.
+3. In the 'Search HTML' pane of the Inspector menu, hover over the HTML node
+   that contains the element to be deleted and right-click.
+4. Select 'Delete Node' in the context menu.
+
+Combine this information with the above instructions for force-enabling
+scrolling to bypass login or other un-closable pop-ups that freeze websites.
