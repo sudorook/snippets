@@ -18,6 +18,7 @@ often forget but are worth remembering.
  * [FFmpeg](ffmpeg.md)
  * [Firefox](firefox.md)
  * [find](find.md)
+ * [Font Lab 8](fontlab.md)
  * [Fonts](fonts.md)
  * [GIMP](gimp.md)
  * [Git](git.md)
