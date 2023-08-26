@@ -16,7 +16,9 @@ To manually reduce the icon width, reduce the `horizontalMargins()` function in
 as follows:
 
 ```js
-return ((taskFrame.margins.left + taskFrame.margins.right) * spacingAdjustment - 2);
+return (
+  (taskFrame.margins.left + taskFrame.margins.right) * spacingAdjustment - 2
+);
 ```
 
 `taskFrame.margins.left` and`taskFrame.margins.right` are global settings with
