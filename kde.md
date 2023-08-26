@@ -32,3 +32,11 @@ checkbox.
 ## Close active window via keyboard
 
 To close the currently focused window, enter `Alt+F4`.
+
+## Clear clipboard from the command line
+
+Use `qdbus` to clear the Klipper's clipboard history:
+
+```sh
+qdbus org.kde.klipper /klipper org.kde.klipper.klipper.clearClipboardHistory
+```
