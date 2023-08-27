@@ -124,3 +124,25 @@ the output:
 ```sh
 beet list -af '$mb_albumid: $album'
 ```
+
+## Rename (and move) files and albums
+
+To rename files, use the `edit` plugin:
+
+```sh
+beet edit "<query>"
+```
+
+where "<query>" is a string that corresponds to the album and/or track metadata.
+The command will open a temporary YAML file for editing. Save the changes, exit
+the editor, and accept the changes at the final prompt.
+
+To rename albums, pass the `-a` flag to `beet edit`:
+
+```sh
+beet edit -a "<query>"
+```
+
+Note that changing track titles will move the file to correspond to its new
+title. Changing the album for all tracks will not move them to a new directory.
+The album metadata itself (`-a`) needs to be changed for that to happen.
