@@ -35,6 +35,7 @@ often forget but are worth remembering.
 - [Linux](linux.md)
 - [Meson](meson.md)
 - [mkvtoolnix](mkvtoolnix.md)
+- [mpv](mpv.md)
 - [Neovim](neovim.md)
 - [Network](network.md)
 - [Pacman](pacman.md)
