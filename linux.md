@@ -21,6 +21,16 @@ If audio playback over HDMI does not work (e.g. playback halts or speeds through
 files), add `intel_iommu=on,igfx_off` to the `GRUB_CMDLINE_LINUX` variable in
 `/etc/default/grub`. Be sure to rebuild the GRUB configuration file afterwards.
 
+## Disable modules at boot
+
+To disable modules, one normally adds a blacklist entry in
+`/etc/modprobe.d/<file>`. To disable during boot, though, edit the GRUB command
+line and add:
+
+```
+modprobe.blacklist=<module>
+```
+
 ## Get architecture and supported instruction sets
 
 To get the architecture and other information, run:
