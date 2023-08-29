@@ -89,3 +89,15 @@ sudo evtest
 
 The program will prompt for a device to watch and will print all events as they
 occur.
+
+## Malfunctioning tablet mode detection (Intel)
+
+Check if the system is correctly detecting the device type by running:
+
+```sh
+cat /sys/class/dmi/id/chassis_type
+```
+
+If the output is **not** 31 or 32 (i.e. laptop), then the `vbtn` kernel module
+is malfunctioning. Disable it by adding to a modprobe blacklist
+`blacklist intel_vbtn`.
