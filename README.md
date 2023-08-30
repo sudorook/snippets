@@ -32,6 +32,7 @@ often forget but are worth remembering.
 - [KVM/libvirt](kvm.md)
 - [LaTeX](latex.md)
 - [LazyVim](lazyvim.md)
+- [lazygit](lazygit.md)
 - [Linux](linux.md)
 - [Meson](meson.md)
 - [mkvtoolnix](mkvtoolnix.md)
