@@ -18,3 +18,23 @@ sub-functions, run:
 ```sh
 python -m cProfile -s cumtime <script>
 ```
+
+## Enable truecolor support in IPython REPL
+
+By default truecolor support is disabled in IPython. This can render highlight
+colors (e.g. pop-up menus) unreadable when run from a terminal with the
+truecolor setting enabled.
+
+To enable truecolor support in IPython itself, generate an IPython config file
+by running:
+
+```sh
+ipython profile create
+```
+
+This will create a directory in `${HOME}/.ipython`. Inside the directory, edit
+the `ipython_config.py` file and change:
+
+```python
+c.TerminalInteractiveShell.true_color = True
+```
