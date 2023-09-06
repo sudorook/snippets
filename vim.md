@@ -94,3 +94,9 @@ To understand the meanings of various key notations, use Vim's `help` utility.
 
 Add `| only` to the end of the `:help ...` command to fill the window with the
 contents of the help file.
+
+## Run external command on current buffer
+
+```vim
+:terminal <command> %
+```
