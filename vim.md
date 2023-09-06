@@ -89,3 +89,8 @@ To understand the meanings of various key notations, use Vim's `help` utility.
 ```vim
 :help key-notation
 ```
+
+## View help in full window
+
+Add `| only` to the end of the `:help ...` command to fill the window with the
+contents of the help file.
