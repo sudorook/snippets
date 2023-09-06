@@ -100,3 +100,16 @@ contents of the help file.
 ```vim
 :terminal <command> %
 ```
+
+## Force re-enable `gq` text wrapping
+
+Some plugins my override the `formatexpr` variable to execute a custom function.
+This will override the default behavior, which is to break text along the
+`textwidth` variable. To reverse this, run:
+
+```vim
+set formatexpr=
+```
+
+To always ensure that `formatexpr` is unset, add an autocmd rule to the vimrc
+file.
