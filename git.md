@@ -208,3 +208,11 @@ git clone <url> -b <branch>
 ```
 
 The `-b` flag will also take tags and detaches from HEAD.
+
+## Set default branch for new repositories
+
+Edit the global .gitconfig file by running:
+
+```sh
+git config --global init.defaultBranch master
+```
