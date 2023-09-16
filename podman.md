@@ -229,3 +229,17 @@ The file will be available within the container at `/run/secrets/<name>`.
 
 To copy the secret to the container environment instead, run
 `--secret <name>,type=env` instead.
+
+## Mount a host directory inside a container at runtime
+
+Specify a directory as a volume to mount inside the container at runtime through
+the `-v` flag.
+
+```sh
+podman run ... -v <path/to/host/dir>:<path/to/container/dir>:Z ...
+```
+
+**Note:** Both paths need to be absolute paths. Otherwise, the provided string
+will be used to create a volume. Also, if the container destination path
+conflicts with any of the existing paths in the container, the `-v` path will
+mask the path in the image.
