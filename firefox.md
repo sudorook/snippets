@@ -56,3 +56,9 @@ void 0;
 
 Combine this information with the above instructions for force-enabling
 scrolling to bypass login or other un-closable pop-ups that freeze websites.
+
+## Fonts are rendered poorly in PDF viewer
+
+Disallow pages from choosing their own fonts. Either do this through the font
+menu in `about:preferences` or by setting `browser.display.use_document_fonts=0`
+in `about:config`.
