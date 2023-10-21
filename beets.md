@@ -146,3 +146,12 @@ beet edit -a "<query>"
 Note that changing track titles will move the file to correspond to its new
 title. Changing the album for all tracks will not move them to a new directory.
 The album metadata itself (`-a`) needs to be changed for that to happen.
+
+## Specify MBID during import
+
+To specify the MBID for an album directly and skip the prompt /
+metadata-scanning behavior, use the `--search-id` flag.
+
+```sh
+beet import --search-id <mbid> <path>
+```
