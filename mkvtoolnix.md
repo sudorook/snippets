@@ -74,3 +74,9 @@ the first audio track to the second, run:
 ```sh
 mkvpropedit <INPUT> --edit track:a1 --set flag-default=0 --edit track:a2 --set flag-default=1
 ```
+
+## Concatenate MKV files
+
+```sh
+mkdmerge -o <output> <input1> +<input2>
+```
