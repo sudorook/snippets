@@ -7,17 +7,21 @@ Unlike applications, titlebars, and other components of the UI, the shell font
 Font changing can be enabled, though, by overriding the default CSS rules.
 
 1. Enable user themes in the GNOME Tweaks menu.
-2. Create a `<Insert theme name>` directory in `~/.local/share/themes`.
-3. Within the theme directory, create `gnome-shell/gnome-shell.css`.
+2. Create a directory `~/.local/share/themes/<theme name>`.
+3. Within the `<theme name>` directory, create `gnome-shell/gnome-shell.css`.
 4. Edit the `gnome-shell.css` file as follows:
 
-```css
-@import url("resource:///org/gnome/theme/gnome-shell.css");
+   ```css
+   @import url("resource:///org/gnome/theme/gnome-shell.css");
 
-stage {
-  font-size: 10pt;
-}
-```
+   stage {
+     font-size: 10pt;
+   }
+   ```
+
+5. Select the theme in GNOME Tweaks. It will be under the 'Shell' drop-down menu
+   as `<theme name>`. (This requires that user themes is enabled in the
+   Extensions applications.
 
 These CSS rules will use the default theme and only apply a change to the font
 size attribute. Other style overrides can also be applied this way.
