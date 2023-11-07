@@ -113,3 +113,9 @@ set formatexpr=
 
 To always ensure that `formatexpr` is unset, add an autocmd rule to the vimrc
 file.
+
+## Step through misspelled words
+
+Use `[s` and `]s` to iterate through all the misspelled words identified by Vim.
+Requires that `set=spell` is enabled.
+
