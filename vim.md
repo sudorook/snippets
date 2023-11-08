@@ -119,3 +119,16 @@ file.
 Use `[s` and `]s` to iterate through all the misspelled words identified by Vim.
 Requires that `set=spell` is enabled.
 
+## Pipe standard output to Vim in a named buffer
+
+Vim can open stdin into a buffer, but it will not be named. To set the name from
+the command line, pipe to Vim as follows:
+
+```sh
+cmd ... | vim - +'file <path>'
+```
+
+where `<path>` is the location to write the buffer when saving.
+
+Note that opening Vim in this manner will prevent any filetype detection and
+thereby disable syntax highlighting.
