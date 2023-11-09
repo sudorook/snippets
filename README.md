@@ -57,4 +57,5 @@ often forget but are worth remembering.
 - [Vim](vim.md)
 - [wee-slack](wee-slack.md)
 - [Windows](windows.md)
+- [yt-dlp](yt-dlp.md)
 - [zsh](zsh.md)
