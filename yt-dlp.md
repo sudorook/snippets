@@ -11,6 +11,15 @@ yt-dlp -x --audio-format mp3 ...
 
 Additionally, use `--audio-quality 0` to use the best quality audio stream.
 
+## Download playlist
+
+To download a playlist while keeping the files numbered by playlist order, use
+`-o` and format the output as:
+
+```sh
+yt-dlp -o "%(playlist_index)s %(title)s.%(ext)s" <playlist>
+```
+
 ## Use browser cookies for downloading streams
 
 First, extract cookies from a web browser. The
