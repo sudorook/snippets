@@ -10,3 +10,22 @@ yt-dlp -x --audio-format mp3 ...
 ```
 
 Additionally, use `--audio-quality 0` to use the best quality audio stream.
+
+## Use browser cookies for downloading streams
+
+First, extract cookies from a web browser. The
+[cookies.txt](https://addons.mozilla.org/en-US/firefox/addon/cookies-txt/)
+Firefox addon can output them in a Netscape Cookie format text file.
+
+Note, a properly formatted Netscape HTTP Cookie file is tab-delimited and
+contains the header:
+
+```txt
+# Netscape HTTP Cookie File
+```
+
+Next, format the `yt-dlp` command:
+
+```sh
+yt-dlp --cookies=<cookie file> <url>
+```
