@@ -53,6 +53,7 @@ often forget but are worth remembering.
 - [SSH](ssh.md)
 - [Tar](tar.md)
 - [Text](text.md)
+- [Thunderbird](thunderbird.md)
 - [UEFI](uefi.md)
 - [Vim](vim.md)
 - [wee-slack](wee-slack.md)
