@@ -2,4 +2,10 @@
 
 ## Enable unity builds
 
-Run `meson setup _build --unity on`.
+Run:
+
+```sh
+meson setup _build --unity on
+```
+
+Here, `_build` is the build directory.
