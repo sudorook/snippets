@@ -29,6 +29,7 @@ often forget but are worth remembering.
 - [ImageMagick](imagemagick.md)
 - [KDE](kde.md)
 - [kitty](kitty.md)
+- [Kodi](kodi.md)
 - [KVM/libvirt](kvm.md)
 - [LaTeX](latex.md)
 - [LazyVim](lazyvim.md)
