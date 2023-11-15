@@ -10,6 +10,7 @@ often forget but are worth remembering.
 - [Beets](beets.md)
 - [C/C++](cpp.md)
 - [Cinnamon](cinnamon.md)
+- [cp](cp.md)
 - [date](date.md)
 - [dconf/gsettings](dconf.md)
 - [dd](dd.md)
