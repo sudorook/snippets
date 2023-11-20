@@ -42,3 +42,12 @@ Use `qdbus` to clear the Klipper's clipboard history:
 ```sh
 qdbus org.kde.klipper /klipper org.kde.klipper.klipper.clearClipboardHistory
 ```
+
+## Fix Dolphin 'Empty Trash'
+
+If Dolphin's Trash directory view fails to update after clicking 'Empty Trash',
+delete the directory entirely:
+
+```sh
+rm -rf ~/.local/share/Trash/
+```
