@@ -163,9 +163,16 @@ command <cmd>
 To delete a value from a Bash array, use `unset` as follows:
 
 ```bash
-unset var[0]
+unset arr[0]
 ```
 
-The above command removes the `0`th element of an array called `var`. Note that
+The above command removes the `0`th element of an array called `arr`. Note that
 the indices of the array do not change (i.e. the `1`st element is not re-indexed
 to the `0`th).
+
+Should resetting indices be necessary, a new array needs to be created. Use:
+
+```bash
+unset arr[0]
+arr=(${arr[@])
+```
