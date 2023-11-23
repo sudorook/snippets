@@ -104,6 +104,12 @@ Alternatively, to store all the input in a variable, use:
 var=$(< /dev/stdin)
 ```
 
+To store multiple inputs via stdin as separate entries of an array, run:
+
+```bash
+read -r -a var <<< "${@}"
+```
+
 ## Source scripts without executing
 
 To source a script, for example, to define variables and functions, wrap the
