@@ -104,11 +104,14 @@ Alternatively, to store all the input in a variable, use:
 var=$(< /dev/stdin)
 ```
 
-To store multiple inputs via stdin as separate entries of an array, run:
+To store multiple inputs from stdin as separate entries of an array, run:
 
 ```bash
 read -r -a var <<< "${@}"
 ```
+
+**Note:** If the values are newline delimited, use `mapfile -t arr <<< "${@}"`
+instead.
 
 ## Source scripts without executing
 
