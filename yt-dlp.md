@@ -38,3 +38,17 @@ Next, format the `yt-dlp` command:
 ```sh
 yt-dlp --cookies=<cookie file> <url>
 ```
+
+## Exclude VP9 (or other) codec from downloader
+
+To prevent downloading VP9 streams, adjust the format string as follows:
+
+```
+-f "bestvideo[vcodec!~='vp0?9']"
+
+```
+
+VP9 codecs can often be reported as `vp9` or `vp09`, so use an optional `0` to
+catch both cases.
+
+**Note:** The format string must be quoted for this to work.
