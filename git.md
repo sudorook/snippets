@@ -48,11 +48,10 @@ git rev-list --count --all
 git gc --prune=now --aggressive
 ```
 
-To find and prune all Git directories (starting from the current working
-directory), run:
+To find and prune/compact all Git directories (including submodules), run:
 
 ```sh
-find . -type d -name ".git" -exec sh -c 'DIR="$(dirname "${1}")" && git -C "${DIR}" gc --prune=now --aggressive' sh {} \;
+find . -type d -name ".git" -exec sh -c 'DIR="$(git -C "$(dirname "${1}")" rev-parse --show-toplevel)" && git -C "${DIR}" gc --prune=now --aggressive && git -C "${DIR}" submodule foreach git gc --prune=now --aggressive' sh {} \;
 ```
 
 ## Push a branch to a differently named remote branch
