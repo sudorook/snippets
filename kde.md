@@ -51,3 +51,16 @@ delete the directory entirely:
 ```sh
 rm -rf ~/.local/share/Trash/
 ```
+
+## Override Dolphin hiding backup files by default
+
+The new default behavior hides \*.bak, \*.sik, \*.old, \*~, and \*% files as if
+they were hidden files. To alter this behavior, create a new file association
+MIME-type.
+
+1. Open 'System Settings'
+2. Open the 'Applications>File Associations' menu.
+3. Under 'Known Types' create a new entry called 'x-backup' and copy over all of
+   the rules in 'x-trash'.
+4. 'Apply' to set the changes. The generated files can be viewed in
+   ~/.local/share/mime/
