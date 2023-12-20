@@ -101,3 +101,12 @@ cat /sys/class/dmi/id/chassis_type
 If the output is **not** 31 or 32 (i.e. laptop), then the `vbtn` kernel module
 is malfunctioning. Disable it by adding to a modprobe blacklist
 `blacklist intel_vbtn`.
+
+## Reset the TTY
+
+If character rendering is botch by, for example, printing a binary file to
+stdout, reset the terminal by running:
+
+```sh
+reset
+```
