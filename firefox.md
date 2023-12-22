@@ -62,3 +62,19 @@ scrolling to bypass login or other un-closable pop-ups that freeze websites.
 Disallow pages from choosing their own fonts. Either do this through the font
 menu in `about:preferences` or by setting `browser.display.use_document_fonts=0`
 in `about:config`.
+
+## Remove horizontal padding when titlebar is disabled
+
+In some desktop environments, disabling the titlebar causes horizontal padding
+to appear on the tab bar. To remote it:
+
+1. In `about:config`, set `toolkit.legacyUserProfileCusomizations.stylesheets`
+   to `true`.
+2. Open the chrome/UserChrome.css file (create it if it's absent) in the Firefox
+   profile directory, and add the following:
+   ```css
+   .titlebar-spacer[type="pre-tabs"],
+   .titlebar-spacer[type="post-tabs"] {
+     display: none !important;
+   }
+   ```
