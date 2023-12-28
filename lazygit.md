@@ -317,3 +317,15 @@
 | g     | view reset options |
 | enter | view commits       |
 
+## Disable default network operations
+
+By default, lazygit automatically fetches from remotes and checks for updates.
+To disable this behavior, specify in the lazygit config file
+(`~/.config/lazygit/config.yml`):
+
+```yaml
+git:
+  autoFetch: false
+update:
+  method: never
+```
