@@ -53,3 +53,31 @@ QEMU, run:
 tar xf <input>
 qemu-img convert -O qcow2 <input> <output>
 ```
+
+# Share a directory between host and guest with `virtiofs`
+
+To share the host directory `<hostdir>` and mount it within a VM at the
+directory `<guestdir>`, do the following:
+
+1. From the Virt-Manager GUI, select the 'Show virtual hardware details' icon.
+2. In the 'Memory' section, check the 'Enable shared memory' box.
+3. Select 'Add Hardware' at the bottom of the UI.
+4. In the pop-up, select 'Filesystem.'
+5. Select the 'virtiofs' driver (the default).
+6. Enter the absolute path of `<hostdir>` in the 'Source path' text box.
+7. Enter the target string (e.g. `share`) in 'Target path.' This value **is
+   not** the `<guestdir>` path.
+8. Confirm the changes (i.e. click 'Finish') and boot the VM.
+9. From within the guest, run:
+   ```sh
+   sudo mount -t virtiofs <share> <guestdir>
+   ```
+   For clarity, `<share>` is the target string, and `<guestdir>` is the absolute
+   path for the mountpoint of the shared directory in the guest.
+
+Additionally, create mount rules in `/etc/fstab` to avoid having to manually
+mount the shared filesystem at each boot. Add a rule as follows:
+
+```txt
+<share>	<guestdir>	virtiofs	defaults	0	0
+```
