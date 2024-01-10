@@ -26,3 +26,9 @@ nvimdiff1        Use Neovim with a 2 panes layout (LOCAL and REMOTE)
 nvimdiff2        Use Neovim with a 3 panes layout (LOCAL, MERGED and REMOTE)
 nvimdiff3        Use Neovim where only the MERGED file is shown
 ```
+
+## Force default formatexpr behavior
+
+```vim
+:lua vim.bo[0].formatexpr = nil
+```
