@@ -61,4 +61,5 @@ often forget but are worth remembering.
 - [wee-slack](wee-slack.md)
 - [Windows](windows.md)
 - [yt-dlp](yt-dlp.md)
+- [Zotero](zotero.md)
 - [zsh](zsh.md)
