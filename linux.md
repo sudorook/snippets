@@ -110,3 +110,16 @@ stdout, reset the terminal by running:
 ```sh
 reset
 ```
+
+## Pass environmental variables to sudo
+
+By default, invoking `sudo` will not copy environment variables to the superuser
+shell. To pass specific variables, open the `/etc/sudoers` file (preferably with
+`visudo`, and use the `env_keep` flag as follows:
+
+```txt
+Defaults env_keep += "EDITOR"
+```
+
+The above will pass the `EDITOR` environment variable. Additional ones can be
+passed by extending the string, e.g. `"EDITOR DIFFPROG"`.
