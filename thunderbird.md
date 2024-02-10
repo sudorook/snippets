@@ -14,3 +14,12 @@
 3. In the search bar, enter 'titlebar.' This will bring to view a section called
    'Window Layout.'
 4. Check 'Hide system window titlebar.'
+
+## Expand/collapse threads
+
+The keyboard shortcuts to expand/collapse email threads are:
+
+- `<left>` expands current thread
+- `<right>` collapses current thread
+- `*` expands all threads
+- `\` collapses all threads
