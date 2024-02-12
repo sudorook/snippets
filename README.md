@@ -9,6 +9,7 @@ often forget but are worth remembering.
 - [Bash](bash.md)
 - [Beets](beets.md)
 - [C/C++](cpp.md)
+- [calibre](calibre.md)
 - [Cinnamon](cinnamon.md)
 - [cp](cp.md)
 - [date](date.md)
