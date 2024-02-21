@@ -78,3 +78,22 @@ to appear on the tab bar. To remote it:
      display: none !important;
    }
    ```
+
+## Force-enable text selection on all websites
+
+Some websites that disable text selection. To override that behavior, open the
+web console and enter:
+
+```js
+document.onselectstart = null;
+let override = document.createElement(override);
+override.innerHTML =
+  "body * :not(input):not(textarea) {
+    user-select: auto !important; -webkit-user-select: auto !important;
+  }";
+```
+
+Note that this will affect _all_ open websites, not just the currently opened
+one.
+
+Also, `allow pasting` will need to be set in the browser console.
