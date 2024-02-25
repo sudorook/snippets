@@ -1,5 +1,10 @@
 # Kodi
 
+## Show UTF-8 characters in UI
+
+In the 'Interface' settings, change the fonts for the skin from 'Default' to
+'Arial based.'
+
 ## Databases
 
 ### Addons
