@@ -54,3 +54,15 @@ rm -r /etc/pacman.d/gnupg/
 pacman-key --init
 pacman-key --populate archlinux
 ```
+
+## Force overwrite all the contents of a package
+
+Use the `--overwrite` flag with `pacman` to write over any existing files in the
+root filesystem. The flag takes a regex as input, so to overwrite everything use
+`'*'`.
+
+```sh
+pacman -S --overwrite "*" ...
+```
+
+Useful if a package installation is broken and contains empty files.
