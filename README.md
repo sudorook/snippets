@@ -24,6 +24,7 @@ often forget but are worth remembering.
 - [Fonts](fonts.md)
 - [GIMP](gimp.md)
 - [Git](git.md)
+- [GitHub](github.md)
 - [Google](google.md)
 - [GNOME](gnome.md)
 - [grep](grep.md)
