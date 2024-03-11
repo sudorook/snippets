@@ -1,4 +1,4 @@
-# C / C++
+# C++
 
 ## De-mangle C++ symbol names
 

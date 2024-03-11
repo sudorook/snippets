@@ -8,7 +8,7 @@ often forget but are worth remembering.
 - [AUR](aur.md)
 - [Bash](bash.md)
 - [Beets](beets.md)
-- [C/C++](cpp.md)
+- [C++](cpp.md)
 - [calibre](calibre.md)
 - [Cinnamon](cinnamon.md)
 - [cp](cp.md)
