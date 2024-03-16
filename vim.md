@@ -132,3 +132,23 @@ where `<path>` is the location to write the buffer when saving.
 
 Note that opening Vim in this manner will prevent any filetype detection and
 thereby disable syntax highlighting.
+
+## Send buffer/selection to external command and replace with output
+
+To send the entire buffer to an external program, run:
+
+```vim
+:%!<cmd>
+```
+
+where `<cmd>` is the program to run, including all command line flags, etc.
+
+The selected text will be passed to the program via `stdin` and replaced in the
+buffer with the program output.
+
+To instead send a selection instead of the entire buffer, select the block of
+text in visual mode and then enter the command:
+
+```vim
+:'<,'>!<cmd>
+```
