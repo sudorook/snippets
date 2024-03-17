@@ -65,13 +65,20 @@ git push <remote> <localbranch>:<remotebranch>
 To only some commits and not the full tree, use:
 
 ```sh
-git push <remote> <localbranch>~<# number commits behind HEAD>:<remotabranch>
+git push <remote> <localbranch>~<number of commits behind HEAD>:<remotabranch>
 ```
 
 For example, to push all but the last 5 commits on master to remote master, run:
 
 ```sh
 git push origin master~5:master
+```
+
+Alternatively, one can send commits up through a specific SHA number instead of
+the number of commits behind HEAD. The format is:
+
+```sh
+git push <remote> <SHA>:<remotebranch>
 ```
 
 ## Pull from a differently named remote branch
