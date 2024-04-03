@@ -32,3 +32,12 @@ nvimdiff3        Use Neovim where only the MERGED file is shown
 ```vim
 :lua vim.bo[0].formatexpr = nil
 ```
+
+## Generate diff of two existing splits
+
+To generate a diff view of two different, vertically split buffers, enter the
+command:
+
+```vim
+:windo diffthis
+```
