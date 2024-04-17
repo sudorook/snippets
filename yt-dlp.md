@@ -52,3 +52,25 @@ VP9 codecs can often be reported as `vp9` or `vp09`, so use an optional `0` to
 catch both cases.
 
 **Note:** The format string must be quoted for this to work.
+
+## Download CloudFlare streams
+
+On the website, inspect the video frame in the right-click context menu, and
+open it in a new tab. The URL will be formatted:
+
+```txt
+https://customer-<ACCOUNTID>.cloudflarestream.com/<VIDEOID>/iframe&...
+```
+
+To download the video, run:
+
+```sh
+yt-dlp https://customer-<ACCOUNTID>.cloudflarestream.com/<VIDEOID>/manifest/video.m3u8
+```
+
+CloudFlare encodes multiple files in a variety of video/audio codecs. To list
+those available, run:
+
+```sh
+curl https://customer-<ACCOUNTID>.cloudflarestream.com/<VIDEOID>/manifest/video.m3u8
+```
