@@ -222,3 +222,25 @@ Edit the global .gitconfig file by running:
 ```sh
 git config --global init.defaultBranch master
 ```
+
+## Push simultaneously to multiple remotes
+
+It is possible to configure a repository to push to multiple remotes in a single
+`push` command by adding multiple push URLs to a single remote. For example, add
+multiple URLs to `origin`:
+
+```sh
+git remote add origin "<origin-url>"
+git remote set-url --add --push origin "<origin-url>"
+git remote set-url --add --push origin "<mirror-url-1>"
+git remote set-url --add --push origin "<mirror-url-2>"
+```
+
+This will result in a single fetch URL (`<origin-url>`) and three push URLs
+(`<origin-url>`, `<mirror-url-1>`, and `<mirror-url-2>`).
+
+To remote a URL from the push list for `origin`, run:
+
+```sh
+git remote set-url --delete --push origin "<url>"
+```
