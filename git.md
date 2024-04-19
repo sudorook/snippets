@@ -244,3 +244,24 @@ To remote a URL from the push list for `origin`, run:
 ```sh
 git remote set-url --delete --push origin "<url>"
 ```
+
+## Push all branches
+
+To push all branches to the corresponding remote branches in a single command,
+run:
+
+```sh
+git push origin :
+```
+
+For this to actually push all branches, through, they need to actually be mapped
+from local to remote repositories. There are several ways to do this. Two
+options below:
+
+```sh
+git push --set-upstream <remote> <branch>
+```
+
+```sh
+git branch --set-upstream-to=<remote>/<branch> <branch>
+```
