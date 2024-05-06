@@ -2,8 +2,9 @@
 
 ## Zero out free space
 
-First, download SDelete. Then, unzip the archive and open the containing folder
-in the command prompt (enter `cmd` in the file manager toolbar).
+First, download [SDelete](https://download.sysinternals.com/files/SDelete.zip).
+Then, unzip the archive and open the containing folder in the command prompt
+(enter `cmd` in the file manager toolbar).
 
 From the prompt, run:
 
