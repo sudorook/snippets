@@ -15,7 +15,7 @@ two, run:
 mkvmerge -o <output> -a 1,2 <input>
 ```
 
-The above assumes that the track IDs of the first two audio steams (from the
+The above assumes that the track IDs of the first two audio streams (from the
 `mkvmerge` output) are 1 and 2, respectively. For selecting video, use `-d`, and
 for subtitles, use `-s`. See `mkvmerge -h` for more information.
 

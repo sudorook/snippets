@@ -553,7 +553,7 @@ scraper for Album and Artist are used, there are no entries here.
 
 The path of a folder containing music that has been scanned into the music
 library. This holds hash values of name, size, and timestamp for each folder and
-sub folder that is used to determine if the conents have changed and thererfore
+sub folder that is used to determine if the contents have changed and therefore
 the music files need rescanning as part of library update.
 
 | Column Name | Data Type    | Description |
