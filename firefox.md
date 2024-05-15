@@ -97,3 +97,9 @@ Note that this will affect _all_ open websites, not just the currently opened
 one.
 
 Also, `allow pasting` will need to be set in the browser console.
+
+## Delete address bar URL suggestions
+
+1. Enter enough text in the address bar to raise undesired suggestion(s).
+2. Press the `<Down>` arrow key until the suggestion is highlighted.
+3. Enter `<Shift>+<Delete>` to remove the entry.
