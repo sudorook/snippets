@@ -265,3 +265,12 @@ git push --set-upstream <remote> <branch>
 ```sh
 git branch --set-upstream-to=<remote>/<branch> <branch>
 ```
+
+## Track new file without adding staging area
+
+Use the `--intent-to-add` or `-N` flag to add an empty file to the tracking
+history without actually adding its contents.
+
+```sh
+git add -N <file>
+```
