@@ -39,6 +39,7 @@ often forget but are worth remembering.
 - [lazygit](lazygit.md)
 - [Linux](linux.md)
 - [Meson](meson.md)
+- [Microsoft Teams](teams.md)
 - [mkvtoolnix](mkvtoolnix.md)
 - [mpv](mpv.md)
 - [Neovim](neovim.md)
