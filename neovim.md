@@ -65,3 +65,10 @@ Note this is a keyboard shortcut, not something to be entered in command mode.
 \* (e.g. `gcgc` uncomments a comment block; `dgc` deletes it). Works only in
 Operator-pending mode.
 
+## Open multiple files (by glob) inside session
+
+Run:
+
+```vim
+:args <glob-pattern>
+```
