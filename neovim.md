@@ -52,3 +52,16 @@ To exit, instead enter:
 ```
 
 Note this is a keyboard shortcut, not something to be entered in command mode.
+
+## Neovim 0.10 commenting
+
+| combo        | effect                                                                                        |
+| ------------ | --------------------------------------------------------------------------------------------- |
+| `gc{motion}` | Comment or uncomment lines covered by {motion}.                                               |
+| `gcc`        | Comment or uncomment `[count]` lines starting at cursor                                       |
+| `{visual}gc` | Comment or uncomment the selected line(s).                                                    |
+| `gc`         | Text object for the largest contiguous block of non-blank commented lines around the cursor\* |
+
+\* (e.g. `gcgc` uncomments a comment block; `dgc` deletes it). Works only in
+Operator-pending mode.
+
