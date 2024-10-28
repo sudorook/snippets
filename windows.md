@@ -6,9 +6,15 @@ First, download [SDelete](https://download.sysinternals.com/files/SDelete.zip).
 Then, unzip the archive and open the containing folder in the command prompt
 (enter `cmd` in the file manager toolbar).
 
+Alternatively, use Winget:
+
+```sh
+winget install Microsoft.Sysinternals.SDelete
+```
+
 From the prompt, run:
 
-```
+```sh
 sdelete.exe -z <DRIVE>
 ```
 
