@@ -6,15 +6,15 @@ First, download [SDelete](https://download.sysinternals.com/files/SDelete.zip).
 Then, unzip the archive and open the containing folder in the command prompt
 (enter `cmd` in the file manager toolbar).
 
-Alternatively, use Winget:
+Alternatively, use WinGet:
 
-```sh
+```ps1
 winget install Microsoft.Sysinternals.SDelete
 ```
 
 From the prompt, run:
 
-```sh
+```ps1
 sdelete.exe -z <DRIVE>
 ```
 
@@ -27,14 +27,14 @@ out the drive and the latter writes random data and then zeros it out.
 Open the command prompt as administrator and go to the `Windows/System32`
 directory:
 
-```
+```ps1
 cd \Windows\System32
 ```
 
 Run `mbr2gpt.exe`, first to check whether the conversion is possible and again
 to actually perform it:
 
-```
+```ps1
 mbr2gpt /validate /AllowFullOS
 mbr2gpt /convert /AllowFullOS
 ```
@@ -43,7 +43,7 @@ Should there be an error message toward the end of the program stating
 `Failed to update ReAgent.xml, please try to manually disable and enable WinRE`,
 disable and enable by running:
 
-```
+```ps1
 reagentc /disable
 reagentc /enable
 ```
