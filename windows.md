@@ -50,3 +50,9 @@ reagentc /enable
 
 This only applies if a Windows recovery environment exists. If not, ignore the
 error.
+
+## Access WSL files from Git Bash on the host
+
+A WSL file's path for Git Bash is `//wsl.localhost/<name>/home/....`, where
+`<name>` is the name of the Linux distribution (e.g. `Ubuntu`). See`wsl --list`
+for the names currently available.
