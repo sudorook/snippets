@@ -65,7 +65,8 @@ MIME-type.
 4. 'Apply' to set the changes. The generated files can be viewed in
    ~/.local/share/mime/
 
-# Force-kill an open window
+## Kill an open window
 
-Enter `Ctrl`+`Meta`+`Esc` to open the kill UI. (The target window needs to be
-visible.) Click in the window to close, or hit `Esc` to cancel.
+1. Enter `Meta+Ctrl+Esc` to open the kill UI. (The target window needs to be
+   visible.)
+2. Click in the window to close, or hit `Esc` to cancel.
