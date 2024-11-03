@@ -65,6 +65,14 @@ MIME-type.
 4. 'Apply' to set the changes. The generated files can be viewed in
    ~/.local/share/mime/
 
+## Tile windows
+
+To use the rudimentary tiling system introduced in Plasma 5.27, hold shift while
+dragging a window.
+
+To change a window layout to a different preset, enter `<Meta+t>` and select
+'Load Layout...' in the top-right corner.
+
 ## Kill an open window
 
 1. Enter `Meta+Ctrl+Esc` to open the kill UI. (The target window needs to be
