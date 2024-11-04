@@ -78,3 +78,13 @@ To change a window layout to a different preset, enter `<Meta+t>` and select
 1. Enter `Meta+Ctrl+Esc` to open the kill UI. (The target window needs to be
    visible.)
 2. Click in the window to close, or hit `Esc` to cancel.
+
+## Clear all recent file history
+
+Sweeper does not clear out all recent history. To completely erase the history
+database entries (`~/.local/share/kactivitymanagerd/resources/database-wal`):
+
+1. Open 'System Settings.'
+2. In the 'Workspace' section of the sidebar, navigate through 'Workspace
+   Behavior' -> 'Recent Files'.
+3. From this window, clear everything.
