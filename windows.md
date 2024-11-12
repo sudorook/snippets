@@ -56,3 +56,16 @@ error.
 A WSL file's path for Git Bash is `//wsl.localhost/<name>/home/....`, where
 `<name>` is the name of the Linux distribution (e.g. `Ubuntu`). See`wsl --list`
 for the names currently available.
+
+## Windows terminal
+
+### Default shortcuts
+
+- Open a new vertical pane: `Ctrl+Alt++`
+- Open an new horizontal pane: `Ctrl+Alt+-`
+- Switch pane focus: `Alt+<arrow>`
+- Resize a pane: `Alt+Shift+<arrow>`
+- Close a pane: `Ctrl+Shift+w`
+- Open command palette: `Ctrl+Shift+p`
+- Duplicate a pane: `Alt+Shift+d`
+- Zoom a pane: selection 'Toggle pane zoom` from the command palette.
