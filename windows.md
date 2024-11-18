@@ -51,6 +51,17 @@ reagentc /enable
 This only applies if a Windows recovery environment exists. If not, ignore the
 error.
 
+## Add a `Ctrl+Alt+t` shortcut for opening Windows Terminal
+
+1. Locate a Windows Terminal .exe file on the system. It will be named 'wt.exe.'
+   One place to look is
+   `c:\Users\<username>\AllData\Local\Microsoft\WindowsApps\wt.exe`.
+2. Open the directory containing wt.exe in File Explorer. Right-click the wt.exe
+   file and select 'Create shortcut' in the 'Show more options' sub-menu.
+3. Move the new `wt - Shorcut.exe` file to the Desktop folder.
+4. Right-click the Desktop shortcut and enter the 'Properties' menu.
+5. In the 'Shortcut key' field, enter `Ctrl+Alt+t`.
+
 ## Access WSL files from Git Bash on the host
 
 A WSL file's path for Git Bash is `//wsl.localhost/<name>/home/....`, where
