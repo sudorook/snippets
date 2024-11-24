@@ -80,3 +80,22 @@ for the names currently available.
 - Open command palette: `Ctrl+Shift+p`
 - Duplicate a pane: `Alt+Shift+d`
 - Zoom a pane: selection 'Toggle pane zoom` from the command palette.
+
+## Find license key
+
+To obtain the license key for a registered installation of Windows, run the
+following int he command prompt (as administrator):
+
+```ps1
+wmic path softwarelicensingservice get OA3xOriginalProductKey
+```
+
+Alternatively, run in Powershell as administrator:
+
+```powershell
+$(Get-WmiObject -query 'select * from SoftwareLicensingService').OA3xOriginalProductKey
+```
+
+The above commands only work for OEM keys. Otherwise, it returns empty. For
+other cases, download and run Magical Jellybean KeyFinder. The activation key is
+the string in the 'CD Key' field.
