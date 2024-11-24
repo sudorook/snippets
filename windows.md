@@ -99,3 +99,25 @@ $(Get-WmiObject -query 'select * from SoftwareLicensingService').OA3xOriginalPro
 The above commands only work for OEM keys. Otherwise, it returns empty. For
 other cases, download and run Magical Jellybean KeyFinder. The activation key is
 the string in the 'CD Key' field.
+
+## Unregister a license key
+
+To, uninstall the current product key from Windows and put it into an unlicensed
+state, run:
+
+```ps1
+slmgr /upk
+```
+
+Then, ensure that the product key is removed from the registry:
+
+```ps1
+slmgr /cpky
+```
+
+Lastly, reset the Windows activation timers so that new users are prompted to
+activate Windows:
+
+```ps1
+slmgr /rearm
+```
