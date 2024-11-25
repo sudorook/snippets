@@ -121,3 +121,21 @@ activate Windows:
 ```ps1
 slmgr /rearm
 ```
+
+## Extract product keys (from Linux)
+
+For OEM keys, use the `chntpw` tool:
+
+```ps1
+sudo chntpw -e </path/to/windows>/Windows/System32/config/SOFTWARE
+```
+
+Replace `<path/to/windows>` with the absolute path to where the drive is
+mounted. The `SOFTWARE` file may be lower case.
+
+```ps1
+dpi \Microsoft\Windows NT\CurrentVersion\DigitalProductId
+```
+
+Note that for the product key must be deactivated on the original device for the
+key to used on another.
