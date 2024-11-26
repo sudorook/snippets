@@ -139,3 +139,13 @@ dpi \Microsoft\Windows NT\CurrentVersion\DigitalProductId
 
 Note that for the product key must be deactivated on the original device for the
 key to used on another.
+
+## Reset Windows 10 without login
+
+1. From the login screen, navigate to the reset option on the bottom-right menu.
+2. Press and hold `Shift`.
+3. Select `Restart`.
+4. Release `Shift` once the 'Please wait...' message is displayed.
+
+This will open up a restart menu. From here, select the 'Troubleshooting'
+option, which will reveal a menu where the device may be factory reset.
