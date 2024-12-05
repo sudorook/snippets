@@ -179,3 +179,12 @@ Should resetting indices be necessary, a new array needs to be created. Use:
 unset arr[0]
 arr=(${arr[@])
 ```
+
+## Slice an array
+
+```sh
+arr=(1 2 3 4 5)
+echo "${arr[@:2]}"
+```
+
+The above will print from the 2nd element (inclusive) onward.
