@@ -47,6 +47,7 @@ often forget but are worth remembering.
 - [Pacman](pacman.md)
 - [parallel](parallel.md)
 - [podman](podman.md)
+- [PowerShell](powershell.md)
 - [Python](python.md)
 - [PDF](pdf.md)
 - [Printers](printers.md)
