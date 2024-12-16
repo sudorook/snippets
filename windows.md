@@ -149,3 +149,9 @@ key to used on another.
 
 This will open up a restart menu. From here, select the 'Troubleshooting'
 option, which will reveal a menu where the device may be factory reset.
+
+## View battery charge/discharge status
+
+```ps1
+gwmi -Class batterystatus -Namespace root\wmi
+```
