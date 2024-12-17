@@ -38,3 +38,24 @@ the `ipython_config.py` file and change:
 ```python
 c.TerminalInteractiveShell.true_color = True
 ```
+
+## Import a file with non-standard file extension
+
+To import a separate script that does not have a `.py` file extension, first
+execute the following:
+
+```python
+from importlib.util import spec_from_loader, module_from_spec
+from importlib.machinery import SourceFileLoader
+import sys
+
+spec = spec_from_loader("<modulename>", SourceFileLoader("<modulename>", "</path/to/input>"))
+module = module_from_spec(spec)
+spec.loader.exec_module(module)
+
+sys.modules[<module_name>] = module
+```
+
+The code block will read the file and store it in `sys.modules` as a
+locally-available module. Once done, use `import` or `from` to import from the
+module as usual.
