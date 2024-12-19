@@ -88,3 +88,7 @@ database entries (`~/.local/share/kactivitymanagerd/resources/database-wal`):
 2. In the 'Workspace' section of the sidebar, navigate through 'Workspace
    Behavior' -> 'Recent Files'.
 3. From this window, clear everything.
+
+## Screen capture
+
+`Super+r` to start. Then, `Super+r` to stop.
