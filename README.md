@@ -64,6 +64,7 @@ often forget but are worth remembering.
 - [Vim](vim.md)
 - [wee-slack](wee-slack.md)
 - [Windows](windows.md)
+- [WSL](wsl.md)
 - [yt-dlp](yt-dlp.md)
 - [Zotero](zotero.md)
 - [zsh](zsh.md)
