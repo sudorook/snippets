@@ -69,9 +69,11 @@ directory `<guestdir>`, do the following:
    not** the `<guestdir>` path.
 8. Confirm the changes (i.e. click 'Finish') and boot the VM.
 9. From within the guest, run:
+
    ```sh
    sudo mount -t virtiofs <share> <guestdir>
    ```
+
    For clarity, `<share>` is the target string, and `<guestdir>` is the absolute
    path for the mountpoint of the shared directory in the guest.
 
