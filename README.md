@@ -60,6 +60,7 @@ often forget but are worth remembering.
 - [Tar](tar.md)
 - [Text](text.md)
 - [Thunderbird](thunderbird.md)
+- [top](top.md)
 - [UEFI](uefi.md)
 - [Vim](vim.md)
 - [wee-slack](wee-slack.md)
