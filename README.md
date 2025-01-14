@@ -51,6 +51,7 @@ often forget but are worth remembering.
 - [Python](python.md)
 - [PDF](pdf.md)
 - [Printers](printers.md)
+- [ps](ps.md)
 - [R](R.md)
 - [Rust](rust.md)
 - [Samba](samba.md)
