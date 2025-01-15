@@ -44,3 +44,20 @@ The output of `ps aux` is as follows:
 - `SIGTERM` - Kill the process, but allow it to do some cleanup first
 - `SIGKILL` - Kill the process, kill it with fire, doesn't do any cleanup
 - `SIGSTOP` - Stop/suspend a process
+
+## View all background jobs
+
+```sh
+jobs
+```
+
+To move current jobs to background, enter `CTRL+z`, and to restore it to the
+foreground, run `fg`. `fg` will default to the most recently backgrounded
+process, but to specify the process, use its job ID (from `jobs`, different from
+process ID).
+
+## View process threads
+
+```sh
+ps m
+```
