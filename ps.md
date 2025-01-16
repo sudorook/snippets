@@ -61,3 +61,35 @@ process ID).
 ```sh
 ps m
 ```
+
+## `iostat` output
+
+The first part is the CPU information:
+
+1. `%user` - Show the percentage of CPU utilization that occurred while
+   executing at the user level (application)
+2. `%nice`- Show the percentage of CPU utilization that occurred while executing
+   at the user level with nice priority.user CPU utilization with nice
+   priorities
+3. `%system` - Show the percentage of CPU utilization that occurred while
+   executing at the system level (kernel).
+4. `%iowait` - Show the percentage of time that the CPU or CPUs were idle during
+   which the system had an outstanding disk I/O request.
+5. `%steal` - Show the percentage of time spent in involuntary wait by the
+   virtual CPU or CPUs while the hypervisor was servicing another virtual
+   processor.
+6. `%idle` - Show the percentage of time that the CPU or CPUs were idle and the
+   system did not have an outstanding disk I/O request.
+
+The second part is the disk utilization:
+
+1. `tps` - Indicate the number of transfers per second that were issued to the
+   device. A transfer is an I/O request to the device. Multiple logical requests
+   can be combined into a single I/O request to the device. A transfer is of
+   indeterminate size.
+2. `kB_read/s` - Indicate the amount of data read from the device expressed in
+   kilobytes per second.
+3. `kB_wrtn/s` - Indicate the amount of data written to the device expressed in
+   kilobytes per second.
+4. `kB_read` - The total number of kilobytes read.
+5. `kB_wrtn` - The total number of kilobytes written.
