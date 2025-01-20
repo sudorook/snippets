@@ -367,7 +367,7 @@ These mappings are enabled by default. (config: mappings.extra)
 
 Examples
 
-# Linewise
+##### Linewise
 
 | Shortcut | Description                                                |
 | -------- | ---------------------------------------------------------- |
@@ -379,7 +379,7 @@ Examples
 | `gcip`   | Toggle inside of paragraph                                 |
 | `gca}`   | Toggle around curly brackets                               |
 
-# Blockwise
+##### Blockwise
 
 | Shortcut | Description                                                  |
 | -------- | ------------------------------------------------------------ |
