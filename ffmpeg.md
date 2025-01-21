@@ -170,7 +170,7 @@ ffmpeg -i <input> -map 0:v -c:v copy -map 0:a:0 -c:a copy -map 0:s:0 -c copy \
        -ss <mm:ss.x> -t <s> <output>
 ```
 
-# Down-mix audio streams
+## Down-mix audio streams
 
 To combine many streams into a simpler layout, use `pan` to re-map audio
 streams. For example, the following will map the front left and front right
