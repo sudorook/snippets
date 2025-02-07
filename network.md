@@ -24,3 +24,15 @@ To directly count access points using each channel, run:
 ```sh
 nmcli -t -f CHAN device wifi | sort | uniq -c | sort -rn
 ```
+
+## DNS lookup
+
+Use the following tools for DNS lookups on the command line.
+
+```sh
+nslookup <ipaddr>
+```
+
+```sh
+dig <ipaddr>
+```
