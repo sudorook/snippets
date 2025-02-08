@@ -20,6 +20,16 @@ Then, run:
 wsl --export <NAME> "$env:userprofile\WSL\Images\<NAME>_$(date -f yyyyMMdd_HHmmss).tar"
 ```
 
+## Shrink an existing WSL virtual hard disk images
+
+The following need to be run as administrator.
+
+```ps1
+Optimize-VHD -Path ((Get-ChildItem -Path HKCU:\Software\Microsoft\Windows\CurrentVersion\Lxss | Where-Object {$_.GetValue("DistributionName") -eq "<NAME>' }).GetValue("BasePath") + "\ext4.vhdx") -Mode Full
+```
+
+Replace `<NAME>` with the name of the Linux distribution image.
+
 ## Enable `interop` in WSL for file-sharing between host and guest
 
 To make files in the host and guest accessible from within and outside the
