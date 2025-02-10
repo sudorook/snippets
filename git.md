@@ -274,3 +274,11 @@ history without actually adding its contents.
 ```sh
 git add -N <file>
 ```
+
+## Track a file that has changed locations
+
+```sh
+git log --follow <file>
+```
+
+Note that this requires that the file exist in the checks-out source tree.
