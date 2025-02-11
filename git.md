@@ -239,11 +239,14 @@ git remote set-url --add --push origin "<mirror-url-2>"
 This will result in a single fetch URL (`<origin-url>`) and three push URLs
 (`<origin-url>`, `<mirror-url-1>`, and `<mirror-url-2>`).
 
-To remote a URL from the push list for `origin`, run:
+To remove a URL from the push list for `origin`, run:
 
 ```sh
 git remote set-url --delete --push origin "<url>"
 ```
+
+Note that at least one push URL needs to be set. Trying to delete them all will
+result in an error.
 
 ## Push all branches
 
