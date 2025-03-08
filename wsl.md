@@ -30,6 +30,15 @@ Optimize-VHD -Path ((Get-ChildItem -Path HKCU:\Software\Microsoft\Windows\Curren
 
 Replace `<NAME>` with the name of the Linux distribution image.
 
+## Enable systemd for boot
+
+In the WSL environment, edit the `/etc/wsl.conf` file:
+
+```txt
+[boot]
+systemd-true
+```
+
 ## Enable `interop` in WSL for file-sharing between host and guest
 
 To make files in the host and guest accessible from within and outside the
