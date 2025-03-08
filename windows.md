@@ -81,6 +81,15 @@ for the names currently available.
 - Duplicate a pane: `Alt+Shift+d`
 - Zoom a pane: selection 'Toggle pane zoom` from the command palette.
 
+## Find out what process has a file locked
+
+Open the Resource Monitor application and navigate:
+
+- CPU tab -> Associated Handles -> and then enter the filename in 'Search
+  Handles.'
+- The UI should show the process that has locked the file. Look into the
+  right-click menu for the option 'End Process.'
+
 ## Find license key
 
 To obtain the license key for a registered installation of Windows, run the
