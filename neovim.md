@@ -72,3 +72,24 @@ Run:
 ```vim
 :args <glob-pattern>
 ```
+
+## Force refresh open buffers and windows
+
+When a buffer or window pane freezes, manually reload the file from disk by
+running:
+
+```vim
+:e
+```
+
+To execute this over all open window panes, run:
+
+```vim
+:windo e
+```
+
+To execute over all open buffers (excluding hidden buffers), run:
+
+```vim
+:bufdo e
+```
