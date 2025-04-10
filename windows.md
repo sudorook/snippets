@@ -159,6 +159,12 @@ key to used on another.
 This will open up a restart menu. From here, select the 'Troubleshooting'
 option, which will reveal a menu where the device may be factory reset.
 
+## Suppress privilege escalation when running tasks
+
+```ps1
+__COMPAT_LAYER=RunAsInvoker
+```
+
 ## View battery charge/discharge status
 
 ```ps1
