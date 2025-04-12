@@ -155,8 +155,16 @@ git submodule update --init --recursive
 One can also use the `foreach` option to execute commands or a shell script in
 each submodule. The following example simply pulls from the master branch:
 
-```
+```sh
 git submodule foreach git pull origin master
+```
+
+## Update a specific submodule
+
+The logic is largely the same as above. The main difference is that the submodule name also passed as a command line argument.
+
+```sh
+git submodule update --init <submodule>
 ```
 
 ## Specify Git commit timestamps
