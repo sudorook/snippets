@@ -63,6 +63,7 @@ often forget but are worth remembering.
 - [Thunderbird](thunderbird.md)
 - [top](top.md)
 - [UEFI](uefi.md)
+- [Video for Linux](v4l2.md))
 - [Vim](vim.md)
 - [wee-slack](wee-slack.md)
 - [Windows](windows.md)
