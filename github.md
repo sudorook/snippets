@@ -28,3 +28,9 @@ https://github.com/<USER>/<REPO>/releases/download/<TAG>/<FILENAME>
 ```
 
 The value for `FILENAME` may not be obvious.
+
+To view the HTML snippet of the JavaScript insert, open:
+
+```txt
+https://github.com/<USER>/<REPO>/releases/expanded_assets/<TAG>
+```
