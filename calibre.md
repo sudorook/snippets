@@ -1,6 +1,6 @@
 # Calibre
 
-## Export library in BibTex format
+## Export library in BibTeX format
 
 1. Open 'Convert books' in the top menubar.
 2. Select 'Generate catalog' in the dropdown menu.
