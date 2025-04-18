@@ -42,12 +42,12 @@ command:
 :windo diffthis
 ```
 
-## Exit edit mode in Neovim terminal when in tmux
+## Exit edit mode in Neovim terminal
 
-In tmux, it is not possible to exit edit mode in a Neovim terminal using `Esc`.
-To exit, instead enter:
+In some cases, it is not possible to exit edit mode in a Neovim terminal using
+`Esc`. To exit, instead enter:
 
-```
+```vim
 <CTRL+\+n>
 ```
 
