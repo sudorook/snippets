@@ -161,7 +161,8 @@ git submodule foreach git pull origin master
 
 ## Update a specific submodule
 
-The logic is largely the same as above. The main difference is that the submodule name also passed as a command line argument.
+The logic is largely the same as above. The main difference is that the
+submodule name also passed as a command line argument.
 
 ```sh
 git submodule update --init <submodule>
