@@ -294,3 +294,25 @@ git log --follow <file>
 ```
 
 Note that this requires that the file exist in the checks-out source tree.
+
+## Disable pushing for a remote
+
+To disable pushing to a remote URL, set the push remote to a dummy value that
+cannot be resolved.
+
+```sh
+git remote set-url --push origin no_push
+```
+
+The above will set the origin remote to the dummy value 'no_push'.
+
+To do this for all remotes, run:
+
+```sh
+while read -r remote; do
+  git remote set-url --push "${remote}" no_push
+done <<< "$(git remote show)"
+```
+
+Attempting `git remote --push --delete <remote> <url>` instead will throw an
+error because at least one value for the push URL must be set.
