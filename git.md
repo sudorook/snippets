@@ -316,3 +316,9 @@ done <<< "$(git remote show)"
 
 Attempting `git remote --push --delete <remote> <url>` instead will throw an
 error because at least one value for the push URL must be set.
+
+## Find the branch in which a tag was made
+
+```sh
+git branch --contains tags/<tag>
+```
