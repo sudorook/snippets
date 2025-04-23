@@ -322,3 +322,12 @@ error because at least one value for the push URL must be set.
 ```sh
 git branch --contains tags/<tag>
 ```
+
+## Filename too long errors in Windows
+
+Git limits paths to 4096 characters, except on MSYS where the limit is 260. To
+extend the limit, set:
+
+```sh
+git config --global core.longpaths true
+```
