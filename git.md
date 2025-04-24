@@ -331,3 +331,9 @@ extend the limit, set:
 ```sh
 git config --global core.longpaths true
 ```
+
+## Check out a path from one branch and apply to current working tree
+
+```sh
+git checkout <commit-ish> -- <path>
+```
