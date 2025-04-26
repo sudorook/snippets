@@ -323,6 +323,39 @@ error because at least one value for the push URL must be set.
 git branch --contains tags/<tag>
 ```
 
+## Rebase one branch onto another branch
+
+Consider the following branch topology:
+
+```txt
+                  ------B
+                 /
+           -----A
+          /
+--- master
+          \
+           -----C
+```
+
+To move all of the commits along branch `B`, which is itself branched from `A`,
+the branch `C` and only migrating the commits made to `B` specifically, run:
+
+```sh
+git rebase --onto C A B
+```
+
+This will move `B` onto `C`, excluding `A`, producing the topology:
+
+```txt
+           -----C
+          /
+--- master
+          \
+           -----A
+                 \
+                  ------B
+```
+
 ## Filename too long errors in Windows
 
 Git limits paths to 4096 characters, except on MSYS where the limit is 260. To
