@@ -27,7 +27,7 @@ To disable modules, one normally adds a blacklist entry in
 `/etc/modprobe.d/<file>`. To disable during boot, though, edit the GRUB command
 line and add:
 
-```
+```txt
 modprobe.blacklist=<module>
 ```
 
@@ -83,7 +83,7 @@ rm -f /swapfile
 
 Install `evtest` and run:
 
-```
+```sh
 sudo evtest
 ```
 
