@@ -370,3 +370,11 @@ git config --global core.longpaths true
 ```sh
 git checkout <commit-ish> -- <path>
 ```
+
+## Make an empty commit message
+
+Use `--allow-empty-message`/`-am` to make commits with empty messages.
+
+```sh
+git commit --allow-empty-message -m ""
+```
