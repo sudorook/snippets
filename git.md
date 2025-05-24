@@ -378,3 +378,12 @@ Use `--allow-empty-message`/`-am` to make commits with empty messages.
 ```sh
 git commit --allow-empty-message -m ""
 ```
+
+## Get a list of the supported SSL backends for Git
+
+Run Git with the `https.sslBackends` set to a nonsense value. This will trigger
+an error message that includes all of the supported backends.
+
+```sh
+git -c http.sslBackend=123 ls-remote 2>&1 | tail -n+2 | xargs
+```
