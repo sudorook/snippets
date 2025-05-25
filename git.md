@@ -379,6 +379,16 @@ Use `--allow-empty-message`/`-am` to make commits with empty messages.
 git commit --allow-empty-message -m ""
 ```
 
+## Clone a repo in a running WSL2 instance to the host
+
+```sh
+git config --global --add safe.directory '//wsl$/<DISTRO></<PATH-TO-REPO>/.git'
+git clone '//wsl$/<DISTRO>/<PATH-TO-REPO>'
+```
+
+`DISTRO` is the name of the WSL2 image (e.g. `Ubuntu-24.04`), and
+`<PATH-TO-REPO>` is the absolute path to the repository.
+
 ## Get a list of the supported SSL backends for Git
 
 Run Git with the `https.sslBackends` set to a nonsense value. This will trigger
