@@ -371,6 +371,11 @@ git config --global core.longpaths true
 git checkout <commit-ish> -- <path>
 ```
 
+## Create a shell script string for a Git alias
+
+Prefix an alias string in the Git config file with `!` (not a Bash operator) to
+indicate that what follows is a script, not a pre-existing Git command.
+
 ## Make an empty commit message
 
 Use `--allow-empty-message`/`-am` to make commits with empty messages.
