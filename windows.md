@@ -170,3 +170,11 @@ __COMPAT_LAYER=RunAsInvoker
 ```ps1
 gwmi -Class batterystatus -Namespace root\wmi
 ```
+
+## Downgrade a program via WinGet
+
+```ps1
+winget install -e --id <package> -v <version --no-upgrade --force
+```
+
+The `-e` flag means exact match.
