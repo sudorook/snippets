@@ -19,6 +19,13 @@ dpkg-query -S $(which <CMD>)
 aptitude why <package>
 ```
 
+To query the program that installed a file, combine with `dpkg-query` as
+follows:
+
+```sh
+aptutude why $(dpkg-query -S $(which <CMD> | cut -d":" -f1))
+```
+
 ## List contents of installed package
 
 ```sh
