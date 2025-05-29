@@ -393,12 +393,3 @@ git clone '//wsl$/<DISTRO>/<PATH-TO-REPO>'
 
 `DISTRO` is the name of the WSL2 image (e.g. `Ubuntu-24.04`), and
 `<PATH-TO-REPO>` is the absolute path to the repository.
-
-## Get a list of the supported SSL backends for Git
-
-Run Git with the `https.sslBackends` set to a nonsense value. This will trigger
-an error message that includes all of the supported backends.
-
-```sh
-git -c http.sslBackend=123 ls-remote 2>&1 | tail -n+2 | xargs
-```
