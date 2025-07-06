@@ -178,3 +178,10 @@ winget install -e --id <package> -v <version --no-upgrade --force
 ```
 
 The `-e` flag means exact match.
+
+## Disable 'Edge year in review'
+
+Open Edge and go to `edge://settings/privact`,.
+
+Toward the bottom of the page, under `Services`, un-check
+`Get notification of related things you can explore in Discover`.
