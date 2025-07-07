@@ -278,6 +278,18 @@ git push --set-upstream <remote> <branch>
 git branch --set-upstream-to=<remote>/<branch> <branch>
 ```
 
+## Force-push more safely
+
+Use `--force-with-lease` to add conditions to force-pushes instead of allowing
+the entire repository to be potentially overwritten. The process is:
+
+1. While the local and remote repositories are synchronized, tag the current
+   state (e.g. `base`.
+2. Make changes that alter the commit tree.
+3. Run `git push --force-with-lease=master:base master:master`
+
+A alternative shorthand for this is to use `--force-if-includes`.
+
 ## Track new file without adding staging area
 
 Use the `--intent-to-add` or `-N` flag to add an empty file to the tracking
