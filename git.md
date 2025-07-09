@@ -383,6 +383,16 @@ git config --global core.longpaths true
 git checkout <commit-ish> -- <path>
 ```
 
+## Rebase a branch onto another branch
+
+To re-parent a branch, run:
+
+```sh
+git rebase --onto <new parent branch> "$(git merge-tree <root branch> @)"
+```
+
+The `@` means that the branch that is being moved is currently checked out.
+
 ## Create a shell script string for a Git alias
 
 Prefix an alias string in the Git config file with `!` (not a Bash operator) to
