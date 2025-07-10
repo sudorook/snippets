@@ -65,6 +65,7 @@ often forget but are worth remembering.
 - [UEFI](uefi.md)
 - [Video for Linux](v4l2.md))
 - [Vim](vim.md)
+- [Virt-Manager](virt-manager.md)
 - [wee-slack](wee-slack.md)
 - [Windows](windows.md)
 - [WSL](wsl.md)
