@@ -93,3 +93,21 @@ To execute over all open buffers (excluding hidden buffers), run:
 ```vim
 :bufdo e
 ```
+
+## Configuration directories
+
+These can be queried by running `:h xdg` in Neovim.
+
+For macOS/Linux:
+
+```txt
+~/.config/nvim
+~/.local/share/nvim
+```
+
+For Windows:
+
+```txt
+\AppData\Local\nvim
+\AppData\Local\nvim-data
+```
