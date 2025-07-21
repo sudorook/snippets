@@ -25,6 +25,18 @@ To directly count access points using each channel, run:
 nmcli -t -f CHAN device wifi | sort | uniq -c | sort -rn
 ```
 
+## ICMP
+
+ICMP Types:
+
+- `Type 0` - Echo Reply
+- `Type 3` - Destination Unreachable
+- `Type 8` - Echo Request
+- `Type 11` - Time Exceeded
+
+For example, `ping` sends type 8 requests to a host and waits for a type 0
+reply.
+
 ## Trace network routes
 
 To track route to any host, use `traceroute`:
