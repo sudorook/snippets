@@ -179,6 +179,41 @@ winget install -e --id <package> -v <version --no-upgrade --force
 
 The `-e` flag means exact match.
 
+## View the process blocking access to a file or directory
+
+### Resource Monitor
+
+Open the `Resource Monitor` application and search for the file/path in the
+`Associated Handles` section.
+
+Right-click any associated process and select `End process`.
+
+### Microsoft Handle
+
+Download and install the Microsoft Handle command line toolP:
+
+```ps1
+winget install Microsoft.Sys8internals.Handle
+```
+
+Then, run from Powershell:
+
+```ps1
+handle.exe -a -u '<absolute path to locked file/dir>'
+```
+
+Then, use `Stop-Process` tokill the process:
+
+```ps1
+Stop-Process -Name "<name>"
+```
+
+Alternatively, run:
+
+```ps1
+Stop-Process -Id "<pid>"
+```
+
 ## Disable 'Edge year in review'
 
 Open Edge and go to `edge://settings/privact`,.
