@@ -179,6 +179,15 @@ winget install -e --id <package> -v <version --no-upgrade --force
 
 The `-e` flag means exact match.
 
+## Keep windows open in all desktops
+
+1. Open the `Task View` by:
+
+   - Clicking on the icon in the taskbar.
+   - Selecting `Win+Tab`.
+
+2. Right-click the window an select `Show this window on all desktops`.
+
 ## View the process blocking access to a file or directory
 
 ### Resource Monitor
