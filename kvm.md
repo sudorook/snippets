@@ -81,5 +81,5 @@ Additionally, create mount rules in `/etc/fstab` to avoid having to manually
 mount the shared filesystem at each boot. Add a rule as follows:
 
 ```txt
-<share>	<guestdir>	virtiofs	defaults	0	0
+<share> <guestdir> virtiofs defaults 0 0
 ```
