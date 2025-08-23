@@ -59,3 +59,43 @@ sys.modules[<module_name>] = module
 The code block will read the file and store it in `sys.modules` as a
 locally-available module. Once done, use `import` or `from` to import from the
 module as usual.
+
+## Use a mutex
+
+```python
+import threading
+import time
+shared_counter = 0
+
+# Mutex
+mutex = threading.Lock()
+
+# Function that will be executed by multiple threads
+def increment_counter():
+    global shared_counter
+    # Acquire the mutex before modifying the shared counter
+    mutex.acquire()
+    try:
+        # Critical section: access and modify the shared counter
+        shared_counter += 1
+        print(f"Thread {threading.current_thread().name} incremented counter to {shared_counter}")
+    finally:
+        # Release the mutex to allow other threads to acquire it
+        mutex.release()
+
+# Create multiple threads
+threads = []
+for i in range(3):
+    thread = threading.Thread(target=increment_counter, name=f"Thread-{i}")
+    threads.append(thread)
+
+# Start the threads
+for thread in threads:
+    thread.start()
+
+# Wait for all threads to finish
+for thread in threads:
+    thread.join()
+
+print("Final value of shared counter:", shared_counter)
+```
