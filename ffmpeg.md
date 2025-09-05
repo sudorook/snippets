@@ -527,3 +527,14 @@ ffmpeg -i <input> -filter:v 'setpts=0.25*PTS' -filter:a 'atempo=2,atempo=2' <out
 ```
 
 [See also](https://trac.ffmpeg.org/wiki/How%20to%20speed%20up%20/%20slow%20down%20a%20video)
+
+## Remove section from video
+
+To remove a section of the video, use `select` filters for the video and audio
+streams:
+
+```sh
+ffmpeg -i <input> -vf "select='not(between(t,<start>,<end>))',  setpts=N/FRAME_RATE/TB" -af "aselect='not(between(t,<start>,<end>))', asetpts=N/SR/TB" -y <output>
+```
+
+`<start>` and `<end>` in both `select` and `aselect` are in seconds.
