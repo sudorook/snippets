@@ -225,7 +225,7 @@ Stop-Process -Id "<pid>"
 
 ## Disable 'Edge year in review'
 
-Open Edge and go to `edge://settings/privact`,.
+Open Edge and go to `edge://settings/privacy`.
 
 Toward the bottom of the page, under `Services`, un-check
 `Get notification of related things you can explore in Discover`.
