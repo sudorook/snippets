@@ -173,13 +173,6 @@ Temporary Items
 *.rej
 
 #
-# FROM: https://raw.githubusercontent.com/sudorook/gitignore/tweak/Global/Syncthing.gitignore
-#
-
-# Syncthing caches
-.stversions
-
-#
 # FROM: https://raw.githubusercontent.com/sudorook/gitignore/tweak/Global/Vim.gitignore
 #
 
@@ -232,26 +225,3 @@ $RECYCLE.BIN/
 
 # Windows shortcuts
 *.lnk
-
-#
-# FROM: https://raw.githubusercontent.com/sudorook/gitignore/tweak/Actionscript.gitignore
-#
-
-# Build and Release Folders
-bin-debug/
-bin-release/
-[Oo]bj/
-[Bb]in/
-
-# Other files and folders
-.settings/
-
-# Executables
-*.swf
-*.air
-*.ipa
-*.apk
-
-# Project files, i.e. `.project`, `.actionScriptProperties` and `.flexProperties`
-# should NOT be excluded as they contain compiler settings and other important
-# information for Eclipse / Flash Builder.
