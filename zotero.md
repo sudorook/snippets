@@ -68,3 +68,6 @@ export MOZ_LEGACY_PROFILES=1
 Zotero may create its own profile in ~/.mozilla. In the ~/.mozilla/firefox,
 directory, open the profile.ini file and ensure that `Default=1` is applied to
 the desired profile.
+
+Also, check the default file associations in the desktop environment. Other
+applications than the web browser may be higher in precedence.
