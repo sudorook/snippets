@@ -58,6 +58,7 @@ often forget but are worth remembering.
 - [sed](sed.md)
 - [SELinux](selinux.md)
 - [SSH](ssh.md)
+- [SystemD](systemd.md)
 - [Tar](tar.md)
 - [Text](text.md)
 - [Thunderbird](thunderbird.md)
