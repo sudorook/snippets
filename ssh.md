@@ -3,11 +3,17 @@
 ## Generate a new SSH key
 
 ```sh
-ssh-keygen -t rsa -b 4096 -o -a 100 -f ~/.ssh/<id>_rsa -q -N ""
+ssh-keygen -t ed25519 -o -a 100 -f ~/.ssh/<id>_rsa -q -N ""
 ```
 
 Note: The -o flag specifies that the key be saved in the new OpenSSH key format
 (v6.5, 2014), which is incompatible with older versions.
+
+For older systems that necessitate RSA keys instead, use:
+
+```bash
+ssh-keygen -t rsa -b 4096 -o -a 100 -f ~/.ssh/<id>_rsa -q -N ""
+```
 
 ## Use SSH key to login to remote server
 
