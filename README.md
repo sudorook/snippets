@@ -72,4 +72,5 @@ often forget but are worth remembering.
 - [WSL](wsl.md)
 - [yt-dlp](yt-dlp.md)
 - [Zotero](zotero.md)
+- [ZFS](zfs.md)
 - [zsh](zsh.md)
