@@ -8,6 +8,7 @@ often forget but are worth remembering.
 - [AUR](aur.md)
 - [Bash](bash.md)
 - [Beets](beets.md)
+- [Brain.fm](brain-fm.md)
 - [calibre](calibre.md)
 - [C++](cpp.md)
 - [Cinnamon](cinnamon.md)
