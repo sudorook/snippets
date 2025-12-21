@@ -72,6 +72,6 @@ often forget but are worth remembering.
 - [Windows](windows.md)
 - [WSL](wsl.md)
 - [yt-dlp](yt-dlp.md)
-- [Zotero](zotero.md)
 - [ZFS](zfs.md)
+- [Zotero](zotero.md)
 - [zsh](zsh.md)
