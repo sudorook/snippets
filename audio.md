@@ -1,6 +1,6 @@
 # Audio
 
-## Split lossless audio using a CUE file.
+## Split lossless audio using a CUE file
 
 For example, to split a FLAC file:
 
