@@ -15,7 +15,7 @@ To download media when no downloader is present on the website:
 
 In the `about:config` menu, disable:
 
-```
+```txt
 browser.privatebrowsing.enable-new-indicator
 ```
 
@@ -72,6 +72,7 @@ to appear on the tab bar. To remote it:
    to `true`.
 2. Open the chrome/UserChrome.css file (create it if it's absent) in the Firefox
    profile directory, and add the following:
+
    ```css
    .titlebar-spacer[type="pre-tabs"],
    .titlebar-spacer[type="post-tabs"] {
