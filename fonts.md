@@ -28,7 +28,7 @@ rendering fonts.
 Often the font name will not match the file. To view the exact file name, parse
 the output from `fc-list`. The output is of the format:
 
-```
+```txt
 <font file absolute path>: <font name>:style=<variant>
 ```
 
