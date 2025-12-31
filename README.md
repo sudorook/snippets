@@ -45,6 +45,7 @@ often forget but are worth remembering.
 - [mpv](mpv.md)
 - [Neovim](neovim.md)
 - [Network](network.md)
+- [NPM](npm.md)
 - [Pacman](pacman.md)
 - [parallel](parallel.md)
 - [PDF](pdf.md)
