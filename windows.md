@@ -182,7 +182,6 @@ The `-e` flag means exact match.
 ## Keep windows open in all desktops
 
 1. Open the `Task View` by:
-
    - Clicking on the icon in the taskbar.
    - Selecting `Win+Tab`.
 
