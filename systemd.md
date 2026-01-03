@@ -1,4 +1,5 @@
 # SystemD
+
 ## Unset the default boot entry
 
 ```sh
