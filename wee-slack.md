@@ -4,19 +4,19 @@
 
 To delete the previous message:
 
-```
+```txt
 s///
 ```
 
 OR
 
-```
+```txt
 1s///
 ```
 
 To delete the 2nd most recent message:
 
-```
+```txt
 2s///
 ```
 
